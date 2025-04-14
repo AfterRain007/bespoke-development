@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="static/style.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/static/js/script.js"></script>
+    <title>Speargun-FIX</title>
+</head>
+<body>
+    <nav>
+        <div class="left-navbar-button-container">
+            <a class="logo-button" href="/">
+                <img src="/media/assets/Logo.png" alt="speargun-logo">
+            </a>
+            <div class="navbar-button-container">
+                <a class="navbar-button" href="/index.html">
+                    <div>HOME</div>
+                    <div></div>
+                </a>
+                <a class="navbar-button" href="/gallery.html">
+                    <div>GALLERY</div>
+                    <div></div>
+                </a>
+                <a class="navbar-button" href="/craft.html">
+                    <div>CRAFT</div>
+                    <div></div>
+                </a>
+                <a class="navbar-button" href="/about-us.html">
+                    <div>ABOUT US</div>
+                    <div></div>
+                </a>
+                <a class="navbar-button" href="/order.html">
+                    <div>ORDER</div>
+                    <div></div>
+                </a>
+            </div>
+        </div>
+        <div class="right-navbar-button-container">
+            <a href="/cart.html" class="shipping-button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor"><path fill-rule="evenodd" d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20l44 0 0 44c0 11 9 20 20 20s20-9 20-20l0-44 44 0c11 0 20-9 20-20s-9-20-20-20l-44 0 0-44c0-11-9-20-20-20s-20 9-20 20l0 44-44 0c-11 0-20 9-20 20z"></path></svg>
+            </a>
+            <div class="profile-dropdown-container">
+                <button class="dropdown-toggle profile-dropdown-button" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    admin
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/profile.html">MANAGE PROFILE</a></li>
+                    <li><a href="/logout.html"><button class="dropdown-item" type="submit">SIGN OUT</button></a></li>
+                </ul>
+            </div> 
+            
+            <button class="hamburger-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#off-canvas-navbar" aria-controls="offcanvasExample">
+                <svg xmlns="http://www.w3.org/2000/svg" height="23" fill="currentColor" viewBox="0 0 448 512"><path fill-rule="evenodd" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"></path></svg>
+            </button>
+        </div>
+    </nav>
+
+    <div class="order-list-page-container">
+        <div class="order-list-page-title-container">
+            <h2>ORDER LIST</h2>
+            <a class="create-new-button" href="{% url 'order' %}">New Order</a>
+        </div>
+        <div class="order-list-content-container">
+            {% with path=request.resolver_match.url_name %}
+            <div class="nav nav-tabs">
+                <div class="nav-item">
+                    {% if path == 'cart_all' %}
+                    <a href="{% url 'cart_all' %}" class="nav-link active" id="all-tab">All</a>
+                    {% else %}
+                    <a href="{% url 'cart_all' %}" class="nav-link" id="all-tab">All</a>
+                    {% endif %}
+                </div>
+                <div class="nav-item">
+                    {% if path == "cart_awaiting
+                    <a href="{% url 'cart_awaiting' %}" class="nav-link active" id="waiting-payment-tab">Awaiting Payment</a>
+                    {% else %}
+                    <a href="{% url 'cart_awaiting' %}" class="nav-link" id="waiting-payment-tab">Awaiting Payment</a>
+                    {% endif %}
+                </div>
+                <div class="nav-item">
+                    {% if path == "cart_pending
+                    <a href="{% url 'cart_pending' %}" class="nav-link active" id="waiting-payment-tab">Pending Confirmation</a>
+                    {% else %}
+                    <a href="{% url 'cart_pending' %}" class="nav-link" id="waiting-payment-tab">Pending Confirmation</a>
+                    {% endif %}
+                </div>
+                <div class="nav-item">
+                    {% if path == "cart_confirmed
+                    <a href="{% url 'cart_confirmed' %}" class="nav-link active" id="process-tab">Confirmed</a>
+                    {% else %}
+                    <a href="{% url 'cart_confirmed' %}" class="nav-link" id="process-tab">Confirmed</a>
+                    {% endif %}
+                </div>
+                <div class="nav-item">
+                    {% if path == "cart_complete
+                    <a href="{% url 'cart_complete' %}" class="nav-link active" id="complete-tab">Completed</a>
+                    {% else %}
+                    <a href="{% url 'cart_complete' %}" class="nav-link" id="complete-tab">Completed</a>
+                    {% endif %}
+                </div>
+                <div class="nav-item">
+                    {% if path == "cart_cancel
+                    <a href="{% url 'cart_cancel' %}" class="nav-link active" id="cancel-tab">Cancelled</a>
+                    {% else %}
+                    <a href="{% url 'cart_cancel' %}" class="nav-link" id="cancel-tab">Cancelled</a>
+                    {% endif %}
+                </div>
+            </div>
+            {% endwith %}
+            
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="all-tab-pane" role="tabpanel" aria-labelledby="all-tab" tabindex="0">
+                    {% for order in Order %}
+                    <div class="order-card-container mb-4">
+                        <div class="order-card-image-container">
+                            <p class="order-number">Order ID {{ order.order_id }}</p>
+                            <img src="/media/assets/Speargun(vertical).png" alt="{% trans 'Vertical Spear' %}" class="vertical-spear">
+                            <img src="/media/assets/Speargun.png" alt="{% trans 'Horizontal Spear' %}" class="horizontal-spear">
+                        </div>
+                    
+                        {% with order.status.status as status %}
+                        <div class="order-card">
+                            <h2>{{ order.name }}</h2>
+                            <div class="order-card-detail">
+                                <div class="order-card-detail-spear">
+                                    <div class="spear-detail">
+                                        <p class="font-bold">Detail Spear</p>
+                                        <p>Carved Name: {{ order.carved_name }}, Dimensions: {{ order.width }}x{{ order.length }} cm, Color: {{ order.color }}</p>
+                                    </div>
+                                    <div class="recipient-detail">
+                                        <p class="font-bold">{{ order.recipient_name }} | {{ order.phone_number }}</p>
+                                        <p>{{ order.address }}</p>
+                                    </div>
+                                </div>
+                                <div class="order-card-detail-spear">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td><p>Order Date</p></td>
+                                                <td><p>:</p></td>
+                                                <td><p>{{ order.created_at }}</p></td>
+                                            </tr>
+                                            <tr>
+                                                <td><p>Total Price</p></td>
+                                                <td><p>:</p></td>
+                                                <td><p>{{ order.get_price_display  }}</p></td>
+                                            </tr>
+                                            <tr>
+                                                <td><p>Payment Method</p></td>
+                                                <td><p>:</p></td>
+                                                <td><p>{{ order.payment_method }}</p></td>
+                                            </tr>
+                                            {% if status == "Sent
+                                            <tr>
+                                                <td><p>Shipping By</p></td>
+                                                <td><p>:</p></td>
+                                                <td><p>{{ order.shipping_companies }}</p></td>
+                                            </tr>
+                                            <tr>
+                                                <td><p>Tracking Number</p></td>
+                                                <td><p>:</p></td>
+                                                <td><p>{{ order.tracking_number }}</p></td>
+                                            </tr>
+                                            {% endif %}
+                                        </tbody>
+                                    </table>
+                                    <div class="order-button-group">
+                                        {% if status == "Awaiting Payment
+                                            <a href="{% url 'confirm_payment' order.id %}" class="confirm-order-button">Confirm Payment</a>
+                                            <form action="{% url 'cancel_order' order.pk %}" method="post">
+                                                {% csrf_token %}
+                                                <button type="submit" class="cancel-order-button">Cancel Order</button>
+                                            </form>
+                                        {% elif status == "Pending Confirmation" and user.is_superuser %}
+                                            <form action="{% url 'confirm_order' order.pk %}" method="post">
+                                                {% csrf_token %}
+                                                <button type="submit" class="cancel-order-button">Confirm Order</button>
+                                            </form>
+                                        {% elif status == "Completed
+                                            <a type="button" class="sexy-button" data-bs-toggle="modal" data-bs-target="#reviewModal">
+                                                <div>Review Order</div>
+                                            </a>
+                                            
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Write Us a Review!</h1>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <form method="post">
+                                                                {% csrf_token %}
+                                                                body
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <a type="button" class="sexy-button" data-bs-dismiss="modal">
+                                                                <div>Close</div>
+                                                            </a>
+                                                            <a type="submit" class="sexy-button">
+                                                                <div>Save changes</div>
+                                                            </a>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>                                            
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                            {% if status == "Awaiting Payment
+                            <p class="custom-countdown" id="countdown-{{ order.pk }}"></p>
+                            <script>
+                                function startCountdown(createdAt, pk) {
+                                    const createdDate = new Date(createdAt).getTime();
+                                    const deadline = createdDate + 60 * 60 * 1000;
+                                    const countdownElement = document.getElementById("countdown-" + pk);
+                    
+                                    const x = setInterval(function() {
+                                        const now = new Date().getTime();
+                                        const distance = deadline - now;
+                    
+                                        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                                        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                    
+                                        countdownElement.innerHTML = `${hours}h ${minutes}m ${seconds}s`;
+                    
+                                        if (distance < 0) {
+                                            clearInterval(x);
+                                            countdownElement.innerHTML = "{% trans 'EXPIRED' %}";
+                                        }
+                                    }, 1000);
+                                }
+                    
+                                startCountdown('{{ order.created_at|date:"Y-m-d H:i:s" }}', "{{ order.pk }}");
+                            </script>
+                            {% endif %}
+                            <p class="custom-badge {{ status|status_class }}" {{ status|status_tooltips }}>{{ status }}
+                                {% if status == "Awaiting Payment
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="currentColor"><path d="M182.6 137.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8l256 0c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-128-128z"/></svg>
+                                {% endif %}
+                            </p>
+                        </div>
+                        {% endwith %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

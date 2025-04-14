@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="static/style.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/static/js/script.js"></script>
+    <title>Speargun-FIX</title>
+</head>
+<body>
+    <nav>
+        <div class="left-navbar-button-container">
+            <a class="logo-button" href="/">
+                <img src="/media/assets/Logo.png" alt="speargun-logo">
+            </a>
+            <div class="navbar-button-container">
+                <a class="navbar-button" href="/index.html">
+                    <div>HOME</div>
+                    <div></div>
+                </a>
+                <a class="navbar-button" href="/gallery.html">
+                    <div>GALLERY</div>
+                    <div></div>
+                </a>
+                <a class="navbar-button" href="/craft.html">
+                    <div>CRAFT</div>
+                    <div></div>
+                </a>
+                <a class="navbar-button" href="/about-us.html">
+                    <div>ABOUT US</div>
+                    <div></div>
+                </a>
+                <a class="navbar-button navbar-button-active" href="/order.html">
+                    <div>ORDER</div>
+                    <div></div>
+                </a>
+            </div>
+        </div>
+        <div class="right-navbar-button-container">
+            <a href="/cart.html" class="shipping-button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor"><path fill-rule="evenodd" d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20l44 0 0 44c0 11 9 20 20 20s20-9 20-20l0-44 44 0c11 0 20-9 20-20s-9-20-20-20l-44 0 0-44c0-11-9-20-20-20s-20 9-20 20l0 44-44 0c-11 0-20 9-20 20z"></path></svg>
+            </a>
+            
+            <div class="profile-dropdown-container">
+                <button class="dropdown-toggle profile-dropdown-button" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    admin
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/profile.html">MANAGE PROFILE</a></li>
+                    <li><a href="/logout.html"><button class="dropdown-item" type="submit">SIGN OUT</button></a></li>
+                </ul>
+            </div> 
+            
+            <button class="hamburger-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#off-canvas-navbar" aria-controls="offcanvasExample">
+                <svg xmlns="http://www.w3.org/2000/svg" height="23" fill="currentColor" viewBox="0 0 448 512"><path fill-rule="evenodd" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"></path></svg>
+            </button>
+        </div>
+    </nav>
+    <form method="post">
+        <div class="create-order-page">
+            <div class="create-order-page-container">
+                {% csrf_token %}
+                <div class="create-order-step-container">
+                    <h3>Create New Order</h3>
+                    <div>
+                        <div class="create-order-step active">
+                            <p>Choose Spear</p>
+                            <p>Select your spear!</p>
+                            <p>1</p>
+                        </div>
+                        <div class="create-order-step">
+                            <p>Choose Address</p>
+                            <p>Select your address!</p>
+                            <p>2</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="create-order-form-container">
+                    <div class="create-order-form active" id="select-spear-form">
+                        <div class="create-order-form-header">
+                            <h2>Choose Spear</h2>
+                            <button type="button" class="create-new-button" data-bs-toggle="modal" data-bs-target="#createSpearModal">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+                                    <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/>
+                                </svg>
+                                <p>Create New Spear</p>
+                            </button>
+                        </div>
+                        <div class="tab-content spear" style="padding: 0px; border: 0px;">
+                            {% if Craft %}
+                                {% for page in Craft %}
+                                    <div id="{{ forloop.counter }}-spear" class="tab-pane spear fade{% if forloop.counter == 1 %} show active{% endif %}" role="tabpanel" aria-labelledby="{{ forloop.counter }}-tab-spear" style="height: 100%;">
+                                        <div class="create-order-form-body spear" style="height: 100%;">
+                                            {% for spear in page %}
+                                                <div>
+                                                    <input type="radio" class="btn-check" id="btn-check-outlined-{{ spear.id }}" name="craft" autocomplete="off" value="{{spear.id}}">
+                                                    <label class="create-order-spear-card" for="btn-check-outlined-{{ spear.id }}">
+                                                        <div><img src="/media/assets/Speargun.png" alt=""></div>
+                                                        <div>
+                                                            <h3>{{spear.carved_name}}</h3>
+                                                            <div>
+                                                                <div class="spear-description">
+                                                                    <p>Carved Name</p>
+                                                                    <p>OmBurhan</p>
+                                                                </div>
+                                                                <div class="spear-description">
+                                                                    <p>Width x Length (cm)</p>
+                                                                    <p>25.0 x 114.0</p>
+                                                                </div>
+                                                                <div class="spear-description">
+                                                                    <p>Color</p>
+                                                                    <p>Golden Brown</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            {% else %}
+                                <div id="1-spear" class="tab-pane spear fade show active" role="tabpanel" aria-labelledby="1-tab-spear" style="height: 100%;">
+                                    <div class="create-order-form-body spear" style="height: 100%;">
+                                        <div style="display: flex; justify-content: center; align-items: center; height: 100%;" id="message_speargun">
+                                            <div>Let's build a speargun!</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        </div>
+                        <div class="create-order-form-footer">
+                            <nav aria-label="Page navigation example">
+                                <ul class="nav pagination" id="myTab" role="tablist">
+                                    <li class="page-item">
+                                        <a class="page-link" id="prev-tab-spear">Previous</a>
+                                    </li>
+                                    {% for i in total_craft_page %}
+                                        <li class="page-item spear">
+                                            <a class="page-link {% if i == 1 %}active{% endif %}" id="{{i}}-tab-spear" data-bs-toggle="tab" href="#{{ i }}-spear" role="tab" aria-controls="{{ i }}" aria-selected="{% if i == 1 %}true{% else %}false{% endif %}">
+                                                {{ i }}
+                                            </a>
+                                        </li>
+                                    {% endfor %}
+                                    <li class="page-item">
+                                        <a class="page-link" id="next-tab-spear">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div>
+                                <button type="button" id="go-to-select-address" class="create-order-navigation-button">
+                                    <p>Go to select address</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+                                        <path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="create-order-form" id="select-address-form">
+                        <div class="create-order-form-header">
+                            <h2>Choose Address</h2>
+                            <button type="button" class="create-new-button" data-bs-toggle="modal" data-bs-target="#create-address-modal">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+                                    <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/>
+                                </svg>
+                                <p>Create New Address</p>
+                            </button>
+                        </div>
+        
+                        <div class="tab-content address" style="padding: 0px; border: 0px;">
+                            {% if Address %}
+                                {% for page in Address %}
+                                    <div id="{{ forloop.counter }}-address" class="tab-pane address fade{% if forloop.counter == 1 %} show active{% endif %}" role="tabpanel" aria-labelledby="{{ forloop.counter }}-tab-address" style="height: 100%;">
+                                        <div class="create-order-form-body address" style="height: 100%;">
+                                            {% for address in page %}
+                                                <div>
+                                                    <input type="radio" class="btn-check" id="btn-check-outlined-{{address.id}}" name="address" autocomplete="off" value="{{address.id}}">
+                                                    <label class="create-order-address-card" for="btn-check-outlined-{{address.id}}">
+                                                        <h3>{{address.recipient_name}} <span>|</span> {{address.phone_number}}</h3>
+                                                        <p>Jl. Swadaya No.16, RT.002/RW.005, Tajur (No.143B Pintu No.15)CILEDUG, KOTA TANGERANG, BANTEN, Indonesia, 15152</p>
+                                                    </label>
+                                                </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            {% else %}
+                                <div id="1-address" class="tab-pane address fade show active" role="tabpanel" aria-labelledby="1-tab-address" style="height: 100%;">
+                                    <div class="create-order-form-body address" style="height: 100%;">
+                                        <div>
+                                            Let's add your address
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        </div>
+                        <div class="create-order-form-footer">
+                            <nav aria-label="Page navigation example">
+                                <ul class="nav pagination" id="myTab" role="tablist">
+                                    <li class="page-item">
+                                        <a class="page-link" id="prev-tab-address">Previous</a>
+                                    </li>
+                                    {% for i in total_address_page %}
+                                        <li class="page-item address">
+                                            <a class="page-link {% if i == 1 %}active{% endif %}" id="{{i}}-tab-address" data-bs-toggle="tab" href="#{{ i }}-address" role="tab" aria-controls="{{ i }}" aria-selected="{% if i == 1 %}true{% else %}false{% endif %}">
+                                                {{ i }}
+                                            </a>
+                                        </li>
+                                    {% endfor %}
+                                    <li class="page-item">
+                                        <a class="page-link" id="next-tab-address">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div>
+                                <button type="button" id="back-to-select-spear" class="create-order-navigation-button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+                                        <path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160zm352-160l-160 160c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L301.3 256 438.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0z"/>
+                                    </svg>
+                                    <p>Back to select spear</p>
+                                </button>
+                                <button type="submit" id="finish-order" class="create-order-navigation-button">
+                                    <p>Finish order</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+                                        <path d="M342.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 178.7l-57.4-57.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l80 80c12.5 12.5 32.8 12.5 45.3 0l160-160zm96 128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 402.7 54.6 297.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l256-256z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+
+        <!-- Spear Modal -->
+        <div class="modal fade" id="createSpearModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body custom-modal-content">
+                        <div>
+                            <h2 style="text-align: center; border:none">Let's Craft Your Dream Spear!</h2>
+                            <p style="text-align: center" class="custom-modal-description">Please fill up information field below</p>
+                        </div>
+                        <div class="mb-3">
+                            <label for="Name" class="form-label"><p class="custom-modal-description">Name</p></label>
+                            <input type="text" class="form-control custom-input" id="custom-name" name="custom-name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="Carved_Name" class="form-label"><p class="custom-modal-description">Carved Name</p></label>
+                            <input type="text" class="form-control custom-input" id="custom-carved_name" name="custom-carved_name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="Spear_Color" class="form-label"><p class="custom-modal-description">Spear Color</p></label>
+                            <select class="form-select custom-input" id="custom-color" name="custom-color">
+                                {% for color in colors %}
+                                    <option value="{{ color.pk }}">
+                                        {{ color.color }}
+                                    </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="width-length-container">
+                            <div class="mb-3">
+                                <label for="Width" class="form-label"><p class="custom-modal-description">Spear's Width</p></label>
+                                <input type="number" class="form-control custom-input" id="custom-width" name="custom-width">
+                            </div>
+                            <div class="mb-3">
+                                <label for="Length" class="form-label"><p class="custom-modal-description">Spear's Length</p></label>
+                                <input type="number" class="form-control custom-input" id="custom-length" name="custom-length">
+                            </div>
+                        </div>
+                        <div class="sign-button-group">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><p style="color: white" class="custom-modal-description">Cancel</p></button>
+                            <button type="button" class="btn btn-primary" id="create-spear-button" disabled>
+                                <p style="color: white" class="custom-modal-description">Create</p>
+                            </button>                       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- Addres Modal -->
+        <div class="modal fade" id="create-address-modal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body custom-modal-content">
+                        <div>
+                            <h2 style="text-align: center; border:none">Edit your address!</h2>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label"><p class="custom-modal-description">Address Title</p></label>
+                            <input type="text" class="form-control custom-input" id="custom-address" name="custom-address">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label"><p class="custom-modal-description">Recipient Name</p></label>
+                            <input type="text" class="form-control custom-input" id="custom-recipient_name" name="custom-recipient_name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label"><p class="custom-modal-description">Phone Number</p></label>
+                            <input type="text" class="form-control custom-input" id="custom-phone_number" name="custom-phone_number">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label"><p class="custom-modal-description">Country</p></label>
+                            <select class="form-select custom-input" id="custom-country" name="custom-country">
+                                {% for country in countries %}
+                                    <option value="{{ country.pk }}">
+                                        {{ country.country }}
+                                    </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label"><p class="custom-modal-description">State</p></label>
+                            <select class="form-select custom-input" id="custom-state" name="custom-state">
+                                {% for state in states %}
+                                    <option value="{{ state.pk }}">
+                                        {{ state.state }}
+                                    </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label"><p class="custom-modal-description">City</p></label>
+                            <select class="form-select custom-input" id="custom-city" name="custom-city">
+                                {% for city in cities %}
+                                    <option value="{{ city.pk }}">
+                                        {{ city.city }}
+                                    </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label"><p class="custom-modal-description">Post Code</p></label>
+                            <input type="text" class="form-control custom-input" name="custom-post_code" id="custom-post_code">
+                        </div>
+                        <div class="mb-4">
+                            <label for="exampleFormControlInput1" class="form-label"><p class="custom-modal-description">Address Detail</p></label>
+                            <textarea class="form-control custom-input" name="custom-note" id="custom-note" rows="3"></textarea>
+                        </div>
+                        <div class="sign-button-group">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><p style="color: white" class="custom-modal-description">Cancel</p></button>
+                            <button type="button" class="btn btn-primary" id="create-address-button" disabled><p style="color: white" class="custom-modal-description">Update</p></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </form>
+
+    <footer class="footer" style="background-color: #001c2b; color: white; padding: 3vw 5vw 3vw 5vw;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="flex: 1;">
+                <h4>HEADQUARTERS</h4>
+                <p style="color: white;">Jalan XYZ, Lombok, Indonesia</p>
+            </div>
+            <div style="flex: 1; text-align: right;">
+                <a href="https://www.instagram.com" style="text-decoration: none; margin-right: 10px;">
+                    <i class="fa-brands fa-square-instagram social-icon" style="color: white; font-size: 24px;"></i>
+                </a>
+                <a href="https://www.twitter.com" style="text-decoration: none; margin-right: 10px;">
+                    <i class="fa-brands fa-square-x-twitter social-icon" style="color: white; font-size: 24px;"></i>
+                </a>
+                <a href="https://www.linkedin.com" style="text-decoration: none;">
+                    <i class="fa-brands fa-linkedin social-icon" style="color: white; font-size: 24px;"></i>
+                </a>
+            </div>            
+        </div>
+        <hr>    
+        <div style="text-align: center;">
+            <p style="color: white;">© Dum Spiro Spero. All rights reserved.</p>
+        </div>
+    </footer>   
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const createButton = document.querySelector('#create-address-button'); // Add an ID for your create button
+            const requiredFields = document.querySelectorAll('#custom-address, #custom-recipient_name, #custom-phone_number, #custom-country, #custom-state, #custom-city, #custom-post_code, #custom-note');
+            
+            // Function to check if all required fields are filled
+            function checkFields() {
+                let allFilled = true;
+                
+                requiredFields.forEach((field) => {
+                    if (!field.value) {
+                        allFilled = false;
+                    }
+                });
+                
+                // Enable or disable the button based on whether all fields are filled
+                createButton.disabled = !allFilled;
+            }
+    
+            // Listen for input changes in the required fields
+            requiredFields.forEach((field) => {
+                field.addEventListener('input', checkFields);
+            });
+    
+            // Initial check in case form is pre-filled
+            checkFields();
+        });
+    </script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const createButton = document.querySelector('#create-spear-button'); // Add an ID for your create button
+            const requiredFields = document.querySelectorAll('#custom-name, #custom-color, #custom-width, #custom-length');
+            
+            // Function to check if all required fields are filled
+            function checkFields() {
+                let allFilled = true;
+                
+                requiredFields.forEach((field) => {
+                    if (!field.value) {
+                        allFilled = false;
+                    }
+                });
+                
+                // Enable or disable the button based on whether all fields are filled
+                createButton.disabled = !allFilled;
+            }
+    
+            // Listen for input changes in the required fields
+            requiredFields.forEach((field) => {
+                field.addEventListener('input', checkFields);
+            });
+    
+            // Initial check in case form is pre-filled
+            checkFields();
+        });
+    </script>
+    
+    <script>
+        $(document).ready(function() {
+            let totalSpearPages = "{{ total_craft_page|length }}";
+            let isAnimating = false; // Add this flag to track if an animation is in progress
+            let currentSpearIndex;
+    
+            // Function to update the current index based on the active class
+            function updateSpearCurrentIndex() {
+                currentSpearIndex = $('.page-item.spear a.active').attr('id').split('-')[0];
+                currentSpearIndex = parseInt(currentSpearIndex, 10); // Convert string to number
+            }
+    
+            // Function to switch tabs
+            function switchSpearTab(index) {
+                if (isAnimating) return; // Exit if animation is already in progress
+    
+                isAnimating = true; // Set flag to true during the animation
+                // Deselect current active tab and tab pane with fade effect
+                $('.tab-pane.spear.show.active').fadeOut(150, function() {
+                    $(this).removeClass('show active');
+    
+                    // Activate the new tab and corresponding content with fade in
+                    $('#' + index + "-spear").fadeIn(150, function() {
+                        $(this).addClass('show active');
+                        $('.tab-pane.spear').each(function() {
+                            $(this).css('display', ''); // Removes the inline display property
+                        });
+                        isAnimating = false; // Set flag to false once the animation is done
+                    });
+                });
+                // Remove the 'active' class from the currently active item
+                $('.page-item.spear a.active').removeClass('active');
+    
+                // Add the 'active' class to the new item based on the currentIndex
+                $(`#${index}-tab-spear`).addClass('active');
+            }
+    
+            // Set the initial index based on the active tab
+            updateSpearCurrentIndex();
+    
+            // Previous button click event
+            $('#prev-tab-spear').click(function() {
+                if (currentSpearIndex > 1 && !isAnimating) {
+                    currentSpearIndex--;
+                    switchSpearTab(currentSpearIndex);
+                }
+            });
+    
+            // Next button click event
+            $('#next-tab-spear').click(function() {
+                if (currentSpearIndex < totalSpearPages && !isAnimating) {
+                    currentSpearIndex++;
+                    switchSpearTab(currentSpearIndex);
+                }
+            });
+    
+            // When a page number is clicked, update the currentIndex dynamically
+            $('.page-item.spear a').click(function() {
+                // Update currentIndex based on clicked tab's ID
+                updateSpearCurrentIndex();
+            });
+    
+            // Event listener for the "Create" button
+            $('#create-spear-button').click(function () {
+                // Select the div using totalSpearPages dynamically
+                let container = $(`#${totalSpearPages}-spear`);
+    
+                // Count the number of divs with class "create-order-form-body spear" inside the dynamically selected container
+                // Find the .create-order-form-body.spear inside the dynamically selected container
+                let createOrderFormBody = container.find('.create-order-form-body.spear');
+    
+                // Count the number of direct child div elements inside the .create-order-form-body.spear
+                let divCount = createOrderFormBody.children('div').length;
+    
+                let spearDiv = `
+                <div id="custom-spear-card">
+                    <input type="radio" class="btn-check" id="btn-check-outlined-custom-spear-${totalSpearPages}" name="craft" autocomplete="off" value="custom-spear">
+                    <label class="create-order-spear-card" for="btn-check-outlined-custom-spear-${totalSpearPages}">
+                        <div><img src="/media/assets/Speargun.png" alt=""></div>
+                        <div>
+                            <h3 id="spear-name-display">Spear Name</h3>
+                            <div>
+                                <div class="spear-description">
+                                    <p>Carved Name</p>
+                                    <p id="carved-name-display"></p>
+                                </div>
+                                <div class="spear-description">
+                                    <p>Width x Length (cm)</p>
+                                    <p id="width-length-display"> x </p>
+                                </div>
+                                <div class="spear-description">
+                                    <p>Color</p>
+                                    <p id="color-display"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+                </div>`;
+    
+                // Check if the number of divs is 3
+                if (divCount >= 3) {
+                    // Increment the totalSpearPages
+                    totalSpearPages++;
+    
+                    // Create a new div with the updated ID and aria-labelledby attributes
+                    let newDiv = `
+                    <div id="${totalSpearPages}-spear" class="tab-pane spear fade" role="tabpanel" aria-labelledby="${totalSpearPages}-tab-spear" style="height: 100%;">
+                        <div class="create-order-form-body spear" style="height: 100%;">
+                            <div id="custom-spear-card">
+                                <input type="radio" class="btn-check" id="btn-check-outlined-custom-spear-${totalSpearPages}" name="craft" autocomplete="off" value="custom-spear">
+                                <label class="create-order-spear-card" for="btn-check-outlined-custom-spear-${totalSpearPages}">
+                                    <div><img src="/media/assets/Speargun.png" alt=""></div>
+                                    <div>
+                                        <h3 id="spear-name-display">Spear Name</h3>
+                                        <div>
+                                            <div class="spear-description">
+                                                <p>Carved Name</p>
+                                                <p id="carved-name-display"></p>
+                                            </div>
+                                            <div class="spear-description">
+                                                <p>Width x Length (cm)</p>
+                                                <p id="width-length-display"> x </p>
+                                            </div>
+                                            <div class="spear-description">
+                                                <p>Color</p>
+                                                <p id="color-display"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>`;
+    
+    
+                    // Append the new div after the last tab-pane div
+                    $(".tab-content.spear").append(newDiv);
+    
+                    // Create the corresponding tab in the pagination
+                    let newTab = `
+                    <li class="page-item spear">
+                        <a class="page-link active" id="${totalSpearPages}-tab-spear" data-bs-toggle="tab" href="#${totalSpearPages}-spear" role="tab" aria-controls="${totalSpearPages}" aria-selected="false" tabindex="-1">
+                            ${totalSpearPages}
+                        </a>
+                    </li>`;
+    
+                    // Append the new tab before the "Next" button in the pagination
+                    $("#next-tab-spear").parent().before(newTab);
+                } else {
+                    $(createOrderFormBody).append(spearDiv);
+                }
+                
+                // Get values from the form fields
+                var name = $('#custom-name').val();
+                var carvedName = $('#custom-carved_name').val();
+                var width = $('#custom-width').val();
+                var length = $('#custom-length').val();
+                var color = $('#custom-color option:selected').text(); // Get the selected color's text
+                
+                // Populate the hidden div with these values
+                $('#spear-name-display').text(name);
+                $('#carved-name-display').text(carvedName);
+                $('#width-length-display').text(width + ' x ' + length);
+                $('#color-display').text(color);
+                $(`#btn-check-outlined-custom-spear-${totalSpearPages}`).prop('checked', true).trigger('change'); // Trigger 'change' event
+                // Remove the 'd-none' class to display the section
+                $('#go-to-select-address').removeAttr('disabled');
+                
+                // Close the modal
+                $('#createSpearModal').modal('hide');
+    
+                // Switch to the last spear page after the modal is hidden
+                switchSpearTab(totalSpearPages);
+                updateSpearCurrentIndex();
+            });
+        });
+    </script>
+    
+    
+    <script>
+        $(document).ready(function() {
+            let totalAddressPages = "{{ total_address_page|length }}";
+            let isAnimating = false; // Add this flag to track if an animation is in progress
+            let currentAddressIndex;
+    
+            // Function to update the current index based on the active class
+            function updateAddressCurrentIndex() {
+                currentAddressIndex = $('.page-item.address a.active').attr('id').split('-')[0];
+                console.log(currentAddressIndex);
+                currentAddressIndex = parseInt(currentAddressIndex, 10); // Convert string to number
+            }
+    
+            // Function to switch tabs
+            function switchAddressTab(index) {
+                if (isAnimating) return; // Exit if animation is already in progress
+    
+                isAnimating = true; // Set flag to true during the animation
+                // Deselect current active tab and tab pane with fade effect
+                $('.tab-pane.address.show.active').fadeOut(150, function() {
+                    $(this).removeClass('show active');
+    
+                    // Activate the new tab and corresponding content with fade in
+                    $('#' + index + "-address").fadeIn(150, function() {
+                        $(this).addClass('show active');
+                        $('.tab-pane.address').each(function() {
+                            $(this).css('display', ''); // Removes the inline display property
+                        });
+                        isAnimating = false; // Set flag to false once the animation is done
+                    });
+                });
+                // Remove the 'active' class from the currently active item
+                $('.page-item.address a.active').removeClass('active');
+    
+                // Add the 'active' class to the new item based on the currentIndex
+                $(`#${index}-tab-address`).addClass('active');
+            }
+    
+            // Set the initial index based on the active tab
+            updateAddressCurrentIndex();
+    
+            // Previous button click event
+            $('#prev-tab-address').click(function() {
+                if (currentAddressIndex > 1 && !isAnimating) {
+                    currentAddressIndex--;
+                    switchAddressTab(currentAddressIndex);
+                }
+            });
+    
+            // Next button click event
+            $('#next-tab-address').click(function() {
+                if (currentAddressIndex < totalAddressPages && !isAnimating) {
+                    currentAddressIndex++;
+                    switchAddressTab(currentAddressIndex);
+                }
+            });
+    
+            // When a page number is clicked, update the currentIndex dynamically
+            $('.page-item.address a').click(function() {
+                // Update currentIndex based on clicked tab's ID
+                updateAddressCurrentIndex();
+            });
+    
+            // Event listener for the "Create" button
+            $('#create-address-button').click(function () {
+                // Select the div using totalSpearPages dynamically
+                let container = $(`#${totalAddressPages}-address`);
+    
+                // Count the number of divs with class "create-order-form-body spear" inside the dynamically selected container
+                // Find the .create-order-form-body.spear inside the dynamically selected container
+                let createOrderFormBody = container.find('.create-order-form-body.address');
+    
+                // Count the number of direct child div elements inside the .create-order-form-body.spear
+                let divAddressCount = createOrderFormBody.children('div').length;
+    
+                let addressDiv = `
+                <div id="custom-address-card">
+                    <input type="radio" class="btn-check" id="btn-check-outlined-custom-address" name="address" autocomplete="off" value="custom-address">
+                    <label class="create-order-address-card" for="btn-check-outlined-custom-address">
+                        <h3 id="address-recipient-name">Recipient Name <span>|</span> Phone Number</h3>
+                        <p id="address-details">
+                            Address Line
+                        </p>
+                    </label>
+                </div>
+                `
+                // Check if the number of divs is 3
+                if (divAddressCount >= 3) {
+                    // Increment the totalSpearPages
+                    totalAddressPages++;
+    
+                    // Create a new div with the updated ID and aria-labelledby attributes
+    
+                    let newAddressDiv = `
+                    <div id="${totalAddressPages}-address" class="tab-pane address fade" role="tabpanel" aria-labelledby="${totalAddressPages}-tab-address" style="height: 100%;">
+                        <div class="create-order-form-body address" style="height: 100%;">
+                            <div id="custom-address-card">
+                                <input type="radio" class="btn-check" id="btn-check-outlined-custom-address" name="address" autocomplete="off" value="custom-address">
+                                <label class="create-order-address-card" for="btn-check-outlined-custom-address">
+                                    <h3 id="address-recipient-name">Recipient Name <span>|</span> Phone Number</h3>
+                                    <p id="address-details">
+                                        Address Line
+                                    </p>
+                                </label>
+                            </div>
+                        </div>
+                    </div>`;
+    
+                    // Append the new div after the last tab-pane div
+                    $(".tab-content.address").append(newAddressDiv);
+    
+                    // Create the corresponding tab in the pagination
+                    let newAddressTab = `
+                    <li class="page-item address">
+                        <a class="page-link active" id="${totalAddressPages}-tab-address" data-bs-toggle="tab" href="#${totalAddressPages}-address" role="tab" aria-controls="${totalAddressPages}" aria-selected="false" tabindex="-1">
+                            ${totalAddressPages}
+                        </a>
+                    </li>`;
+    
+                    // Append the new tab before the "Next" button in the pagination
+                    $("#next-tab-address").parent().before(newAddressTab);
+                } else {
+                    $(createOrderFormBody).append(addressDiv);
+                }
+    
+                // Get values from the form fields
+                var recipientName = $('#custom-recipient_name').val();
+                var phoneNumber = $('#custom-phone_number').val();
+                var addressDetail = $('#custom-address').val() + ', ' +
+                                    $('#custom-note').val() + ', ' +
+                                    $('#custom-city option:selected').text() + ', ' +
+                                    $('#custom-state option:selected').text() + ', ' +
+                                    $('#custom-country option:selected').text() + ', ' +
+                                    $('#custom-post_code').val();
+                
+                // Populate the hidden div with these values
+                $('#address-recipient-name').html(recipientName + ' <span>|</span> ' + phoneNumber);
+                $('#address-details').text(addressDetail);
+                $('#btn-check-outlined-custom-address').prop('checked', true).trigger('change'); // Trigger 'change' event
+                
+                // Close the modal
+                $('#create-address-modal').modal('hide');
+                $('#finish-order').removeAttr('disabled');
+                
+                // Switch to the last address page after the modal is hidden
+                switchAddressTab(totalAddressPages);
+                updateAddressCurrentIndex();
+            });
+        });
+    </script>
+</body>

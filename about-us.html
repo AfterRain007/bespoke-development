@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="static/style.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/static/js/script.js"></script>
+    <title>Speargun-FIX</title>
+</head>
+<body>
+    <nav>
+        <div class="left-navbar-button-container">
+            <a class="logo-button" href="/">
+                <img src="/media/assets/Logo.png" alt="speargun-logo">
+            </a>
+            <div class="navbar-button-container">
+                <a class="navbar-button" href="/index.html">
+                    <div>HOME</div>
+                    <div></div>
+                </a>
+                <a class="navbar-button" href="/gallery.html">
+                    <div>GALLERY</div>
+                    <div></div>
+                </a>
+                <a class="navbar-button" href="/craft.html">
+                    <div>CRAFT</div>
+                    <div></div>
+                </a>
+                <a class="navbar-button navbar-button-active" href="/about-us.html">
+                    <div>ABOUT US</div>
+                    <div></div>
+                </a>
+                <a class="navbar-button" href="/order.html">
+                    <div>ORDER</div>
+                    <div></div>
+                </a>
+            </div>
+        </div>
+        <div class="right-navbar-button-container">
+            <a href="/cart.html" class="shipping-button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor"><path fill-rule="evenodd" d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20l44 0 0 44c0 11 9 20 20 20s20-9 20-20l0-44 44 0c11 0 20-9 20-20s-9-20-20-20l-44 0 0-44c0-11-9-20-20-20s-20 9-20 20l0 44-44 0c-11 0-20 9-20 20z"></path></svg>
+            </a>
+            
+            <div class="profile-dropdown-container">
+                <button class="dropdown-toggle profile-dropdown-button" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    admin
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/profile.html">MANAGE PROFILE</a></li>
+                    <li><a href="/logout.html"><button class="dropdown-item" type="submit">SIGN OUT</button></a></li>
+                </ul>
+            </div> 
+            
+            <button class="hamburger-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#off-canvas-navbar" aria-controls="offcanvasExample">
+                <svg xmlns="http://www.w3.org/2000/svg" height="23" fill="currentColor" viewBox="0 0 448 512"><path fill-rule="evenodd" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"></path></svg>
+            </button>
+        </div>
+    </nav>
+    <div class="about-us-greetings-container" style="background-image: url('/media/assets/diving-1.jpg');">
+        <div class="about-us-greetings-content-container">
+            <h2 style="border: none;padding: 0">KNOW MORE ABOUT DUM SPIRO SPERO</h2>
+            <div>
+                <p>At Dum Spiro Spero, we craft high-performance spearguns using premium wood sourced from Indonesia’s rich forests. Our gear is built for precision, durability, and respect for the seas, designed for those who share our passion for spearfishing.</p>
+                <p>We are dedicated to sustainable fishing practices and marine conservation, ensuring that our actions protect the ocean and support local communities. Dive with purpose, knowing your gear is crafted with care for both the sport and the environment.</p>
+            </div>
+        </div>
+    </div>
+    <div class="about-us-reasons-container">
+        <div>
+            <h2>BUILD YOUR AMAZING SPEAR AT THE BEST PLACE</h2>
+            <p style="text-align: justify;">From design to delivery, we provide a comprehensive service that encompasses conceptualization, budgeting, time scheduling, project management, shipyard co-ordination and warranties.</p>
+        </div>
+        <div>
+            <div class="about-us-reason-container">
+                <h3>We craft to your exact needs.</h3>
+                <p>Whether you’re looking for a custom-made speargun or selecting from our range of expertly crafted models, our team ensures precision and performance in every piece. We work closely with you to tailor the perfect speargun for your needs.</p>
+            </div>
+            <div class="about-us-reason-container">
+                <h3>Expert craftsmanship you can trust.</h3>
+                <p>Our team brings together years of experience in speargun design and woodworking, using only the finest materials sourced from Indonesia. We handle every project with care, ensuring quality at every step, from design to delivery.</p>
+            </div>
+            <div class="about-us-reason-container">
+                <h3>A seamless experience from start to finish.</h3>
+                <p>From the initial consultation to final testing in the water, we stay with you every step of the way. Our dedicated team ensures a smooth, stress-free process, so you can focus on what matters most—your next dive.</p>
+            </div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <div class="ceo-profile-container">
+        <div>
+            <div style="background-image: url('/media/assets/photo/mark2.jpg');"></div>
+            <div>
+                <h3>Mark Christopher Sharp</h3>
+                <p>CEO</p>
+            </div>
+        </div>
+        <div>
+            <h2>OUR CEO</h2>
+            <p style="text-align: justify;">Mark Christopher Sharp’s journey is a reflection of his unwavering love for the ocean and the thrill of spearfishing. Born with a deep connection to the sea, Mark’s passion led him to explore Indonesia’s vibrant waters, where he found his true calling in the art of spearfishing.</p>
+            <br>
+            <p style="text-align: justify;">With years of experience in the sport, Mark honed his skills not only as a spearfisher but also as an innovator, developing cutting-edge spearguns that combine craftsmanship and functionality. His dedication to excellence drove him to create Dum Spiro Spero, where he could blend his love for spearfishing with his desire to offer the best equipment to fellow enthusiasts.</p>
+        </div>
+    </div>
+    <footer class="footer" style="background-color: #001c2b; color: white; padding: 3vw 5vw 3vw 5vw;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="flex: 1;">
+                <h4>HEADQUARTERS</h4>
+                <p style="color: white;">Jalan XYZ, Lombok, Indonesia</p>
+            </div>
+            <div style="flex: 1; text-align: right;">
+                <a href="https://www.instagram.com" style="text-decoration: none; margin-right: 10px;">
+                    <i class="fa-brands fa-square-instagram social-icon" style="color: white; font-size: 24px;"></i>
+                </a>
+                <a href="https://www.twitter.com" style="text-decoration: none; margin-right: 10px;">
+                    <i class="fa-brands fa-square-x-twitter social-icon" style="color: white; font-size: 24px;"></i>
+                </a>
+                <a href="https://www.linkedin.com" style="text-decoration: none;">
+                    <i class="fa-brands fa-linkedin social-icon" style="color: white; font-size: 24px;"></i>
+                </a>
+            </div>            
+        </div>
+        <hr>    
+        <div style="text-align: center;">
+            <p style="color: white;">© Dum Spiro Spero. All rights reserved.</p>
+        </div>
+    </footer>   
+</body>

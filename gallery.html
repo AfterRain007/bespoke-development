@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="static/style.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/static/js/script.js"></script>
+    <title>Speargun-FIX</title>
+</head>
+<body>
+    <nav>
+        <div class="left-navbar-button-container">
+            <a class="logo-button" href="/">
+                <img src="/media/assets/Logo.png" alt="speargun-logo">
+            </a>
+            <div class="navbar-button-container">
+                <a class="navbar-button" href="/index.html">
+                    <div>HOME</div>
+                    <div></div>
+                </a>
+                <a class="navbar-button navbar-button-active" href="/gallery.html">
+                    <div>GALLERY</div>
+                    <div></div>
+                </a>
+                <a class="navbar-button" href="/craft.html">
+                    <div>CRAFT</div>
+                    <div></div>
+                </a>
+                <a class="navbar-button" href="/about-us.html">
+                    <div>ABOUT US</div>
+                    <div></div>
+                </a>
+                <a class="navbar-button" href="/order.html">
+                    <div>ORDER</div>
+                    <div></div>
+                </a>
+            </div>
+        </div>
+        <div class="right-navbar-button-container">
+            <a href="/cart.html" class="shipping-button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor"><path fill-rule="evenodd" d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20l44 0 0 44c0 11 9 20 20 20s20-9 20-20l0-44 44 0c11 0 20-9 20-20s-9-20-20-20l-44 0 0-44c0-11-9-20-20-20s-20 9-20 20l0 44-44 0c-11 0-20 9-20 20z"></path></svg>
+            </a>
+            
+            <div class="profile-dropdown-container">
+                <button class="dropdown-toggle profile-dropdown-button" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    admin
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/profile.html">MANAGE PROFILE</a></li>
+                    <li><a href="/logout.html"><button class="dropdown-item" type="submit">SIGN OUT</button></a></li>
+                </ul>
+            </div> 
+            
+            <button class="hamburger-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#off-canvas-navbar" aria-controls="offcanvasExample">
+                <svg xmlns="http://www.w3.org/2000/svg" height="23" fill="currentColor" viewBox="0 0 448 512"><path fill-rule="evenodd" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"></path></svg>
+            </button>
+        </div>
+    </nav>
+    <div class="gallery-page-container">
+        <div class="gallery-page-caption-container">
+            <h1 class="gallery-page-title">OUR SPEARGUN GALLERY</h1>
+            <p class="gallery-page-description" style="text-align: justify;">Explore our collection of expertly crafted spearguns, designed for precision, power, and durability. Each piece in our gallery showcases the perfect blend of traditional craftsmanship and modern innovation, made from premium Indonesian wood and built to enhance your spearfishing experience.</p>
+            <p class="gallery-page-description" style="text-align: justify;">Ready to find your perfect speargun? Click the button below to dive in!</p>
+            <a href="" class="sexy-button"><div>Let's Craft</div></a>
+        </div>
+        <div class="gallery-grid-container">
+            <div class="pict1 box"></div>
+            <div class="pict2 box"></div>
+            <div class="pict3 box"></div>
+            <div class="pict4 box"></div>
+            <div class="pict5 box"></div>
+            <div class="pict6 box"></div>
+            <div class="pict7 box"></div>
+            <div class="pict8 box"></div>
+            <div class="pict9 box"></div>
+            <div class="pict10 box"></div>
+            <div class="pict11 box"></div>
+            <div class="pict12 box"></div>
+            <div class="pict13 box"></div>
+            <div class="pict14 box"></div>
+            <div class="pict15 box"></div>
+            <div class="pict16 box"></div>
+        </div>
+    </div>
+    <footer class="footer" style="background-color: #001c2b; color: white; padding: 3vw 5vw 3vw 5vw;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="flex: 1;">
+                <h4>HEADQUARTERS</h4>
+                <p style="color: white;">Jalan XYZ, Lombok, Indonesia</p>
+            </div>
+            <div style="flex: 1; text-align: right;">
+                <a href="https://www.instagram.com" style="text-decoration: none; margin-right: 10px;">
+                    <i class="fa-brands fa-square-instagram social-icon" style="color: white; font-size: 24px;"></i>
+                </a>
+                <a href="https://www.twitter.com" style="text-decoration: none; margin-right: 10px;">
+                    <i class="fa-brands fa-square-x-twitter social-icon" style="color: white; font-size: 24px;"></i>
+                </a>
+                <a href="https://www.linkedin.com" style="text-decoration: none;">
+                    <i class="fa-brands fa-linkedin social-icon" style="color: white; font-size: 24px;"></i>
+                </a>
+            </div>            
+        </div>
+        <hr>    
+        <div style="text-align: center;">
+            <p style="color: white;">© Dum Spiro Spero. All rights reserved.</p>
+        </div>
+    </footer>   
+</body>
