@@ -64,324 +64,620 @@
             </button>
         </div>
     </nav>
-    <form method="post">
-        <div class="create-order-page">
-            <div class="create-order-page-container">
-                {% csrf_token %}
-                <div class="create-order-step-container">
-                    <h3>Create New Order</h3>
-                    <div>
-                        <div class="create-order-step active">
-                            <p>Choose Spear</p>
-                            <p>Select your spear!</p>
-                            <p>1</p>
-                        </div>
-                        <div class="create-order-step">
-                            <p>Choose Address</p>
-                            <p>Select your address!</p>
-                            <p>2</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="create-order-form-container">
-                    <div class="create-order-form active" id="select-spear-form">
-                        <div class="create-order-form-header">
-                            <h2>Choose Spear</h2>
-                            <button type="button" class="create-new-button" data-bs-toggle="modal" data-bs-target="#createSpearModal">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
-                                    <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/>
-                                </svg>
-                                <p>Create New Spear</p>
-                            </button>
-                        </div>
-                        <div class="tab-content spear" style="padding: 0px; border: 0px;">
-                            {% if Craft %}
-                                {% for page in Craft %}
-                                    <div id="{{ forloop.counter }}-spear" class="tab-pane spear fade{% if forloop.counter == 1 %} show active{% endif %}" role="tabpanel" aria-labelledby="{{ forloop.counter }}-tab-spear" style="height: 100%;">
-                                        <div class="create-order-form-body spear" style="height: 100%;">
-                                            {% for spear in page %}
-                                                <div>
-                                                    <input type="radio" class="btn-check" id="btn-check-outlined-{{ spear.id }}" name="craft" autocomplete="off" value="{{spear.id}}">
-                                                    <label class="create-order-spear-card" for="btn-check-outlined-{{ spear.id }}">
-                                                        <div><img src="media/assets/Speargun.png" alt=""></div>
-                                                        <div>
-                                                            <h3>{{spear.carved_name}}</h3>
-                                                            <div>
-                                                                <div class="spear-description">
-                                                                    <p>Carved Name</p>
-                                                                    <p>OmBurhan</p>
-                                                                </div>
-                                                                <div class="spear-description">
-                                                                    <p>Width x Length (cm)</p>
-                                                                    <p>25.0 x 114.0</p>
-                                                                </div>
-                                                                <div class="spear-description">
-                                                                    <p>Color</p>
-                                                                    <p>Golden Brown</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </label>
-                                                </div>
-                                            {% endfor %}
-                                        </div>
-                                    </div>
-                                {% endfor %}
-                            {% else %}
-                                <div id="1-spear" class="tab-pane spear fade show active" role="tabpanel" aria-labelledby="1-tab-spear" style="height: 100%;">
-                                    <div class="create-order-form-body spear" style="height: 100%;">
-                                        <div style="display: flex; justify-content: center; align-items: center; height: 100%;" id="message_speargun">
-                                            <div>Let's build a speargun!</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            {% endif %}
-                        </div>
-                        <div class="create-order-form-footer">
-                            <nav aria-label="Page navigation example">
-                                <ul class="nav pagination" id="myTab" role="tablist">
-                                    <li class="page-item">
-                                        <a class="page-link" id="prev-tab-spear">Previous</a>
-                                    </li>
-                                    {% for i in total_craft_page %}
-                                        <li class="page-item spear">
-                                            <a class="page-link {% if i == 1 %}active{% endif %}" id="{{i}}-tab-spear" data-bs-toggle="tab" href="#{{ i }}-spear" role="tab" aria-controls="{{ i }}" aria-selected="{% if i == 1 %}true{% else %}false{% endif %}">
-                                                {{ i }}
-                                            </a>
-                                        </li>
-                                    {% endfor %}
-                                    <li class="page-item">
-                                        <a class="page-link" id="next-tab-spear">Next</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                            <div>
-                                <button type="button" id="go-to-select-address" class="create-order-navigation-button">
-                                    <p>Go to select address</p>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
-                                        <path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"/>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="create-order-form" id="select-address-form">
-                        <div class="create-order-form-header">
-                            <h2>Choose Address</h2>
-                            <button type="button" class="create-new-button" data-bs-toggle="modal" data-bs-target="#create-address-modal">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
-                                    <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/>
-                                </svg>
-                                <p>Create New Address</p>
-                            </button>
-                        </div>
-        
-                        <div class="tab-content address" style="padding: 0px; border: 0px;">
-                            {% if Address %}
-                                {% for page in Address %}
-                                    <div id="{{ forloop.counter }}-address" class="tab-pane address fade{% if forloop.counter == 1 %} show active{% endif %}" role="tabpanel" aria-labelledby="{{ forloop.counter }}-tab-address" style="height: 100%;">
-                                        <div class="create-order-form-body address" style="height: 100%;">
-                                            {% for address in page %}
-                                                <div>
-                                                    <input type="radio" class="btn-check" id="btn-check-outlined-{{address.id}}" name="address" autocomplete="off" value="{{address.id}}">
-                                                    <label class="create-order-address-card" for="btn-check-outlined-{{address.id}}">
-                                                        <h3>{{address.recipient_name}} <span>|</span> {{address.phone_number}}</h3>
-                                                        <p>Jl. Swadaya No.16, RT.002/RW.005, Tajur (No.143B Pintu No.15)CILEDUG, KOTA TANGERANG, BANTEN, Indonesia, 15152</p>
-                                                    </label>
-                                                </div>
-                                            {% endfor %}
-                                        </div>
-                                    </div>
-                                {% endfor %}
-                            {% else %}
-                                <div id="1-address" class="tab-pane address fade show active" role="tabpanel" aria-labelledby="1-tab-address" style="height: 100%;">
-                                    <div class="create-order-form-body address" style="height: 100%;">
-                                        <div>
-                                            Let's add your address
-                                        </div>
-                                    </div>
-                                </div>
-                            {% endif %}
-                        </div>
-                        <div class="create-order-form-footer">
-                            <nav aria-label="Page navigation example">
-                                <ul class="nav pagination" id="myTab" role="tablist">
-                                    <li class="page-item">
-                                        <a class="page-link" id="prev-tab-address">Previous</a>
-                                    </li>
-                                    {% for i in total_address_page %}
-                                        <li class="page-item address">
-                                            <a class="page-link {% if i == 1 %}active{% endif %}" id="{{i}}-tab-address" data-bs-toggle="tab" href="#{{ i }}-address" role="tab" aria-controls="{{ i }}" aria-selected="{% if i == 1 %}true{% else %}false{% endif %}">
-                                                {{ i }}
-                                            </a>
-                                        </li>
-                                    {% endfor %}
-                                    <li class="page-item">
-                                        <a class="page-link" id="next-tab-address">Next</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                            <div>
-                                <button type="button" id="back-to-select-spear" class="create-order-navigation-button">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
-                                        <path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160zm352-160l-160 160c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L301.3 256 438.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0z"/>
-                                    </svg>
-                                    <p>Back to select spear</p>
-                                </button>
-                                <button type="submit" id="finish-order" class="create-order-navigation-button">
-                                    <p>Finish order</p>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
-                                        <path d="M342.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 178.7l-57.4-57.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l80 80c12.5 12.5 32.8 12.5 45.3 0l160-160zm96 128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 402.7 54.6 297.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l256-256z"/>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    
+    
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="off-canvas-navbar" aria-labelledby="offcanvasExampleLabel" style="width: 50vw">
+        <div class="off-canvas-close-button-container">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-navbar-button-container">
+            <div class="navbar-button-container-top">
+                <a class="navbar-button-offcanvas navbar-button-offcanvas-active" href="/">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor"><path fill-rule="evenodd" d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"></path></svg>
+                    <div>HOME</div>
+                </a>
+                <a class="navbar-button-offcanvas" href="/gallery">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor"><path fill-rule="evenodd" d="M160 32c-35.3 0-64 28.7-64 64l0 224c0 35.3 28.7 64 64 64l352 0c35.3 0 64-28.7 64-64l0-224c0-35.3-28.7-64-64-64L160 32zM396 138.7l96 144c4.9 7.4 5.4 16.8 1.2 24.6S480.9 320 472 320l-144 0-48 0-80 0c-9.2 0-17.6-5.3-21.6-13.6s-2.9-18.2 2.9-25.4l64-80c4.6-5.7 11.4-9 18.7-9s14.2 3.3 18.7 9l17.3 21.6 56-84C360.5 132 368 128 376 128s15.5 4 20 10.7zM192 128a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zM48 120c0-13.3-10.7-24-24-24S0 106.7 0 120L0 344c0 75.1 60.9 136 136 136l320 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-320 0c-48.6 0-88-39.4-88-88l0-224z"></path></svg>
+                    <div>GALLERY</div>
+                </a>
+                <a class="navbar-button-offcanvas" href="/build-spear">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path fill-rule="evenodd" d="M464 6.1c9.5-8.5 24-8.1 33 .9l8 8c9 9 9.4 23.5 .9 33l-85.8 95.9c-2.6 2.9-4.1 6.7-4.1 10.7l0 21.4c0 8.8-7.2 16-16 16l-15.8 0c-4.6 0-8.9 1.9-11.9 5.3L100.7 500.9C94.3 508 85.3 512 75.8 512c-8.8 0-17.3-3.5-23.5-9.8L9.7 459.7C3.5 453.4 0 445 0 436.2c0-9.5 4-18.5 11.1-24.8l111.6-99.8c3.4-3 5.3-7.4 5.3-11.9l0-27.6c0-8.8 7.2-16 16-16l34.6 0c3.9 0 7.7-1.5 10.7-4.1L464 6.1zM432 288c3.6 0 6.7 2.4 7.7 5.8l14.8 51.7 51.7 14.8c3.4 1 5.8 4.1 5.8 7.7s-2.4 6.7-5.8 7.7l-51.7 14.8-14.8 51.7c-1 3.4-4.1 5.8-7.7 5.8s-6.7-2.4-7.7-5.8l-14.8-51.7-51.7-14.8c-3.4-1-5.8-4.1-5.8-7.7s2.4-6.7 5.8-7.7l51.7-14.8 14.8-51.7c1-3.4 4.1-5.8 7.7-5.8zM87.7 69.8l14.8 51.7 51.7 14.8c3.4 1 5.8 4.1 5.8 7.7s-2.4 6.7-5.8 7.7l-51.7 14.8L87.7 218.2c-1 3.4-4.1 5.8-7.7 5.8s-6.7-2.4-7.7-5.8L57.5 166.5 5.8 151.7c-3.4-1-5.8-4.1-5.8-7.7s2.4-6.7 5.8-7.7l51.7-14.8L72.3 69.8c1-3.4 4.1-5.8 7.7-5.8s6.7 2.4 7.7 5.8zM208 0c3.7 0 6.9 2.5 7.8 6.1l6.8 27.3 27.3 6.8c3.6 .9 6.1 4.1 6.1 7.8s-2.5 6.9-6.1 7.8l-27.3 6.8-6.8 27.3c-.9 3.6-4.1 6.1-7.8 6.1s-6.9-2.5-7.8-6.1l-6.8-27.3-27.3-6.8c-3.6-.9-6.1-4.1-6.1-7.8s2.5-6.9 6.1-7.8l27.3-6.8 6.8-27.3c.9-3.6 4.1-6.1 7.8-6.1z"></path></svg>
+                    <div>CRAFT</div>
+                </a>
+                <a class="navbar-button-offcanvas" href="/">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor"><path fill-rule="evenodd" d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l448 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zm80 256l64 0c44.2 0 80 35.8 80 80c0 8.8-7.2 16-16 16L80 384c-8.8 0-16-7.2-16-16c0-44.2 35.8-80 80-80zm-32-96a64 64 0 1 1 128 0 64 64 0 1 1 -128 0zm256-32l128 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-128 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64l128 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-128 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64l128 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-128 0c-8.8 0-16-7.2-16-16s7.2-16 16-16z"></path></svg>
+                    <div>ABOUT US</div>
+                </a>
             </div>
-        </div>        
-
-        <!-- Spear Modal -->
-        <div class="modal fade" id="createSpearModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-body custom-modal-content">
-                        <div>
-                            <h2 style="text-align: center; border:none">Let's Craft Your Dream Spear!</h2>
-                            <p style="text-align: center" class="custom-modal-description">Please fill up information field below</p>
-                        </div>
-                        <div class="mb-3">
-                            <label for="Name" class="form-label"><p class="custom-modal-description">Name</p></label>
-                            <input type="text" class="form-control custom-input" id="custom-name" name="custom-name">
-                        </div>
-                        <div class="mb-3">
-                            <label for="Carved_Name" class="form-label"><p class="custom-modal-description">Carved Name</p></label>
-                            <input type="text" class="form-control custom-input" id="custom-carved_name" name="custom-carved_name">
-                        </div>
-                        <div class="mb-3">
-                            <label for="Spear_Color" class="form-label"><p class="custom-modal-description">Spear Color</p></label>
-                            <select class="form-select custom-input" id="custom-color" name="custom-color">
-                                {% for color in colors %}
-                                    <option value="{{ color.pk }}">
-                                        {{ color.color }}
-                                    </option>
-                                {% endfor %}
-                            </select>
-                        </div>
-                        <div class="width-length-container">
-                            <div class="mb-3">
-                                <label for="Width" class="form-label"><p class="custom-modal-description">Spear's Width</p></label>
-                                <input type="number" class="form-control custom-input" id="custom-width" name="custom-width">
-                            </div>
-                            <div class="mb-3">
-                                <label for="Length" class="form-label"><p class="custom-modal-description">Spear's Length</p></label>
-                                <input type="number" class="form-control custom-input" id="custom-length" name="custom-length">
-                            </div>
-                        </div>
-                        <div class="sign-button-group">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><p style="color: white" class="custom-modal-description">Cancel</p></button>
-                            <button type="button" class="btn btn-primary" id="create-spear-button" disabled>
-                                <p style="color: white" class="custom-modal-description">Create</p>
-                            </button>                       
-                        </div>
-                    </div>
+            <div class="navbar-button-container-bottom">
+                <a href="" class="navbar-button-offcanvas">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor"><path fill-rule="evenodd" d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20l44 0 0 44c0 11 9 20 20 20s20-9 20-20l0-44 44 0c11 0 20-9 20-20s-9-20-20-20l-44 0 0-44c0-11-9-20-20-20s-20 9-20 20l0 44-44 0c-11 0-20 9-20 20z"></path></svg>
+                    <div>SHIPPING STATUS</div>
+                </a>
+                
+                <div class="navbar-button-offcanvas dropstart">
+                    <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        admin
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/manage-profile">MANAGE PROFILE</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><form action="/en/logout/"><button class="dropdown-item" type="submit">SIGN OUT</button></form></li>
+                    </ul>
                 </div>
+                
             </div>
         </div>
-        
-
-        <!-- Addres Modal -->
-        <div class="modal fade" id="create-address-modal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-body custom-modal-content">
-                        <div>
-                            <h2 style="text-align: center; border:none">Edit your address!</h2>
-                        </div>
+    </div>
+    
+    <!-- SIGN IN -->
+    <div class="modal fade" id="SignInModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body custom-modal-content">
+                    <div>
+                        <h2 style="text-align: center; border:none">Sign in to your account</h2>
+                        <p style="text-align: center" class="custom-modal-description">You must be signed in to perform this action</p>
+                    </div>
+                    <form action="/en/login/" method="POST">
+                        <input type="hidden" name="csrfmiddlewaretoken" value="R5dqMCSZko8PUbaem3fE7Q7UHXuNHFLqCHsbz7i21ftO6YJjLzERrQJQOdNMEH8V">
                         <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label"><p class="custom-modal-description">Address Title</p></label>
-                            <input type="text" class="form-control custom-input" id="custom-address" name="custom-address">
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label"><p class="custom-modal-description">Recipient Name</p></label>
-                            <input type="text" class="form-control custom-input" id="custom-recipient_name" name="custom-recipient_name">
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label"><p class="custom-modal-description">Phone Number</p></label>
-                            <input type="text" class="form-control custom-input" id="custom-phone_number" name="custom-phone_number">
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label"><p class="custom-modal-description">Country</p></label>
-                            <select class="form-select custom-input" id="custom-country" name="custom-country">
-                                {% for country in countries %}
-                                    <option value="{{ country.pk }}">
-                                        {{ country.country }}
-                                    </option>
-                                {% endfor %}
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label"><p class="custom-modal-description">State</p></label>
-                            <select class="form-select custom-input" id="custom-state" name="custom-state">
-                                {% for state in states %}
-                                    <option value="{{ state.pk }}">
-                                        {{ state.state }}
-                                    </option>
-                                {% endfor %}
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label"><p class="custom-modal-description">City</p></label>
-                            <select class="form-select custom-input" id="custom-city" name="custom-city">
-                                {% for city in cities %}
-                                    <option value="{{ city.pk }}">
-                                        {{ city.city }}
-                                    </option>
-                                {% endfor %}
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label"><p class="custom-modal-description">Post Code</p></label>
-                            <input type="text" class="form-control custom-input" name="custom-post_code" id="custom-post_code">
+                            <label for="exampleFormControlInput1" class="form-label"><p class="custom-modal-description">Email Address</p></label>
+                            <input type="text" name="login_username" class="form-control custom-input" id="exampleFormControlInput1" placeholder="name@example.com">
                         </div>
                         <div class="mb-4">
-                            <label for="exampleFormControlInput1" class="form-label"><p class="custom-modal-description">Address Detail</p></label>
-                            <textarea class="form-control custom-input" name="custom-note" id="custom-note" rows="3"></textarea>
+                            <label for="exampleInputPassword1" class="form-label"><p class="custom-modal-description">Password</p></label>
+                            <input type="password" name="login_password" class="form-control custom-input" id="exampleInputPassword1">
                         </div>
                         <div class="sign-button-group">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><p style="color: white" class="custom-modal-description">Cancel</p></button>
-                            <button type="button" class="btn btn-primary" id="create-address-button" disabled><p style="color: white" class="custom-modal-description">Update</p></button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><p style="color: white" class="custom-modal-description">Close</p></button>
+                            <button type="submit" class="btn btn-primary"><p style="color: white" class="custom-modal-description">Sign In</p></button>
+                        </div>
+                    </form>
+                    <div>
+                        <p style="text-align: center" class="custom-modal-description">Don't have an account?<button class="switch-modal-button" data-bs-target="#SignUpModal" data-bs-toggle="modal">Sign Up</button></p>
+                        <a href="/en/accounts/google/login/?next=/">Login with Google</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- SIGN UP -->
+    <div class="modal fade" id="SignUpModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body custom-modal-content">
+                <div>
+                    <h2 style="text-align: center; border:none">Let's register your account!</h2>
+                    <p style="text-align: center" class="custom-modal-description">you must be signed in to perform this action</p>
+                </div>
+                <form action="/en/sign-up/" method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="R5dqMCSZko8PUbaem3fE7Q7UHXuNHFLqCHsbz7i21ftO6YJjLzERrQJQOdNMEH8V">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label"><p class="custom-modal-description">Username</p></label>
+                        <input type="text" class="form-control custom-input" id="username" name="username">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label"><p class="custom-modal-description">Email Address</p></label>
+                        <input type="email" class="form-control custom-input" id="exampleFormControlInput1" placeholder="example@mail.com" name="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label"><p class="custom-modal-description">Password</p></label>
+                        <input type="password" class="form-control custom-input" id="password1" name="password1">
+                    </div>
+                    <div class="mb-4">
+                        <label for="exampleInputPassword1" class="form-label"><p class="custom-modal-description">Confirm Password</p></label>
+                        <input type="password" class="form-control custom-input" id="password2" name="password2">
+                    </div>
+                    <div class="sign-button-group">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><p style="color: white" class="custom-modal-description">Cancel</p></button>
+                        <button type="submit" class="btn btn-primary"><p style="color: white" class="custom-modal-description">Create</p></button>
+                    </div>
+                </form>
+                <div>
+                    <p style="text-align: center" class="custom-modal-description">Already have an account?<button class="switch-modal-button" data-bs-target="#SignInModal" data-bs-toggle="modal">Sign In</button></p>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+        <div class="main-footer-container">
+            <main>
+                
+        <form method="post">
+            <div class="create-order-page">
+                <div class="create-order-page-container">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="R5dqMCSZko8PUbaem3fE7Q7UHXuNHFLqCHsbz7i21ftO6YJjLzERrQJQOdNMEH8V">
+                    <div class="create-order-step-container">
+                        <h3>Create New Order</h3>
+                        <div>
+                            <div class="create-order-step active">
+                                <p>Choose Spear</p>
+                                <p>Select your spear!</p>
+                                <p>1</p>
+                            </div>
+                            <div class="create-order-step">
+                                <p>Choose Address</p>
+                                <p>Select your address!</p>
+                                <p>2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="create-order-form-container">
+                        <div class="create-order-form active" id="select-spear-form">
+                            <div class="create-order-form-header">
+                                <h2>Choose Spear</h2>
+                                <button type="button" class="create-new-button" data-bs-toggle="modal" data-bs-target="#createSpearModal">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+                                        <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"></path>
+                                    </svg>
+                                    <p>Create New Spear</p>
+                                </button>
+                            </div>
+                            <div class="tab-content spear" style="padding: 0px; border: 0px;">
+                                
+                                    
+                                        <div id="1-spear" class="tab-pane spear fade show active" role="tabpanel" aria-labelledby="1-tab-spear" style="height: 100%;">
+                                            <div class="create-order-form-body spear" style="height: 100%;">
+                                                
+                                                    <div>
+                                                        <input type="radio" class="btn-check" id="btn-check-outlined-31" name="craft" autocomplete="off" value="31">
+                                                        <label class="create-order-spear-card" for="btn-check-outlined-31">
+                                                            <div><img src="/media/assets/Speargun.png" alt=""></div>
+                                                            <div>
+                                                                <h3>jnjnjjjn</h3>
+                                                                <div>
+                                                                    <div class="spear-description">
+                                                                        <p>Carved Name</p>
+                                                                        <p>OmBurhan</p>
+                                                                    </div>
+                                                                    <div class="spear-description">
+                                                                        <p>Width x Length (cm)</p>
+                                                                        <p>25.0 x 114.0</p>
+                                                                    </div>
+                                                                    <div class="spear-description">
+                                                                        <p>Color</p>
+                                                                        <p>Golden Brown</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                
+                                                    <div>
+                                                        <input type="radio" class="btn-check" id="btn-check-outlined-32" name="craft" autocomplete="off" value="32">
+                                                        <label class="create-order-spear-card" for="btn-check-outlined-32">
+                                                            <div><img src="/media/assets/Speargun.png" alt=""></div>
+                                                            <div>
+                                                                <h3>jnjnjnkkkmnn</h3>
+                                                                <div>
+                                                                    <div class="spear-description">
+                                                                        <p>Carved Name</p>
+                                                                        <p>OmBurhan</p>
+                                                                    </div>
+                                                                    <div class="spear-description">
+                                                                        <p>Width x Length (cm)</p>
+                                                                        <p>25.0 x 114.0</p>
+                                                                    </div>
+                                                                    <div class="spear-description">
+                                                                        <p>Color</p>
+                                                                        <p>Golden Brown</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                
+                                                    <div>
+                                                        <input type="radio" class="btn-check" id="btn-check-outlined-33" name="craft" autocomplete="off" value="33">
+                                                        <label class="create-order-spear-card" for="btn-check-outlined-33">
+                                                            <div><img src="/media/assets/Speargun.png" alt=""></div>
+                                                            <div>
+                                                                <h3>8987</h3>
+                                                                <div>
+                                                                    <div class="spear-description">
+                                                                        <p>Carved Name</p>
+                                                                        <p>OmBurhan</p>
+                                                                    </div>
+                                                                    <div class="spear-description">
+                                                                        <p>Width x Length (cm)</p>
+                                                                        <p>25.0 x 114.0</p>
+                                                                    </div>
+                                                                    <div class="spear-description">
+                                                                        <p>Color</p>
+                                                                        <p>Golden Brown</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                
+                                            </div>
+                                        </div>
+                                    
+                                        <div id="2-spear" class="tab-pane spear fade" role="tabpanel" aria-labelledby="2-tab-spear" style="height: 100%;">
+                                            <div class="create-order-form-body spear" style="height: 100%;">
+                                                
+                                                    <div>
+                                                        <input type="radio" class="btn-check" id="btn-check-outlined-34" name="craft" autocomplete="off" value="34">
+                                                        <label class="create-order-spear-card" for="btn-check-outlined-34">
+                                                            <div><img src="/media/assets/Speargun.png" alt=""></div>
+                                                            <div>
+                                                                <h3>kontol</h3>
+                                                                <div>
+                                                                    <div class="spear-description">
+                                                                        <p>Carved Name</p>
+                                                                        <p>OmBurhan</p>
+                                                                    </div>
+                                                                    <div class="spear-description">
+                                                                        <p>Width x Length (cm)</p>
+                                                                        <p>25.0 x 114.0</p>
+                                                                    </div>
+                                                                    <div class="spear-description">
+                                                                        <p>Color</p>
+                                                                        <p>Golden Brown</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                
+                                                    <div>
+                                                        <input type="radio" class="btn-check" id="btn-check-outlined-35" name="craft" autocomplete="off" value="35">
+                                                        <label class="create-order-spear-card" for="btn-check-outlined-35">
+                                                            <div><img src="/media/assets/Speargun.png" alt=""></div>
+                                                            <div>
+                                                                <h3>Gilang</h3>
+                                                                <div>
+                                                                    <div class="spear-description">
+                                                                        <p>Carved Name</p>
+                                                                        <p>OmBurhan</p>
+                                                                    </div>
+                                                                    <div class="spear-description">
+                                                                        <p>Width x Length (cm)</p>
+                                                                        <p>25.0 x 114.0</p>
+                                                                    </div>
+                                                                    <div class="spear-description">
+                                                                        <p>Color</p>
+                                                                        <p>Golden Brown</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                
+                                            </div>
+                                        </div>
+                                    
+                                
+                            </div>
+                            <div class="create-order-form-footer">
+                                <nav aria-label="Page navigation example">
+                                    <ul class="nav pagination" id="myTab" role="tablist">
+                                        <li class="page-item">
+                                            <a class="page-link" id="prev-tab-spear">Previous</a>
+                                        </li>
+                                        
+                                            <li class="page-item spear">
+                                                <a class="page-link active" id="1-tab-spear" data-bs-toggle="tab" href="#1-spear" role="tab" aria-controls="1" aria-selected="true">
+                                                    1
+                                                </a>
+                                            </li>
+                                        
+                                            <li class="page-item spear">
+                                                <a class="page-link " id="2-tab-spear" data-bs-toggle="tab" href="#2-spear" role="tab" aria-controls="2" aria-selected="false" tabindex="-1">
+                                                    2
+                                                </a>
+                                            </li>
+                                        
+                                        <li class="page-item">
+                                            <a class="page-link" id="next-tab-spear">Next</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <div>
+                                    <button type="button" id="go-to-select-address" class="create-order-navigation-button" disabled="">
+                                        <p>Go to select address</p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+                                            <path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="create-order-form" id="select-address-form">
+                            <div class="create-order-form-header">
+                                <h2>Choose Address</h2>
+                                <button type="button" class="create-new-button" data-bs-toggle="modal" data-bs-target="#create-address-modal">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+                                        <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"></path>
+                                    </svg>
+                                    <p>Create New Address</p>
+                                </button>
+                            </div>
+            
+                            <div class="tab-content address" style="padding: 0px; border: 0px;">
+                                
+                                    
+                                        <div id="1-address" class="tab-pane address fade show active" role="tabpanel" aria-labelledby="1-tab-address" style="height: 100%;">
+                                            <div class="create-order-form-body address" style="height: 100%;">
+                                                
+                                                    <div>
+                                                        <input type="radio" class="btn-check" id="btn-check-outlined-32" name="address" autocomplete="off" value="32">
+                                                        <label class="create-order-address-card" for="btn-check-outlined-32">
+                                                            <h3>efqefqefqeqfq <span>|</span> 0391939429243</h3>
+                                                            <p>Jl. Swadaya No.16, RT.002/RW.005, Tajur (No.143B Pintu No.15)CILEDUG, KOTA TANGERANG, BANTEN, Indonesia, 15152</p>
+                                                        </label>
+                                                    </div>
+                                                
+                                                    <div>
+                                                        <input type="radio" class="btn-check" id="btn-check-outlined-33" name="address" autocomplete="off" value="33">
+                                                        <label class="create-order-address-card" for="btn-check-outlined-33">
+                                                            <h3>oji <span>|</span> joij</h3>
+                                                            <p>Jl. Swadaya No.16, RT.002/RW.005, Tajur (No.143B Pintu No.15)CILEDUG, KOTA TANGERANG, BANTEN, Indonesia, 15152</p>
+                                                        </label>
+                                                    </div>
+                                                
+                                                    <div>
+                                                        <input type="radio" class="btn-check" id="btn-check-outlined-34" name="address" autocomplete="off" value="34">
+                                                        <label class="create-order-address-card" for="btn-check-outlined-34">
+                                                            <h3>kjn <span>|</span> njlkn</h3>
+                                                            <p>Jl. Swadaya No.16, RT.002/RW.005, Tajur (No.143B Pintu No.15)CILEDUG, KOTA TANGERANG, BANTEN, Indonesia, 15152</p>
+                                                        </label>
+                                                    </div>
+                                                
+                                            </div>
+                                        </div>
+                                    
+                                        <div id="2-address" class="tab-pane address fade" role="tabpanel" aria-labelledby="2-tab-address" style="height: 100%;">
+                                            <div class="create-order-form-body address" style="height: 100%;">
+                                                
+                                                    <div>
+                                                        <input type="radio" class="btn-check" id="btn-check-outlined-35" name="address" autocomplete="off" value="35">
+                                                        <label class="create-order-address-card" for="btn-check-outlined-35">
+                                                            <h3>ads <span>|</span> asd</h3>
+                                                            <p>Jl. Swadaya No.16, RT.002/RW.005, Tajur (No.143B Pintu No.15)CILEDUG, KOTA TANGERANG, BANTEN, Indonesia, 15152</p>
+                                                        </label>
+                                                    </div>
+                                                
+                                                    <div>
+                                                        <input type="radio" class="btn-check" id="btn-check-outlined-37" name="address" autocomplete="off" value="37">
+                                                        <label class="create-order-address-card" for="btn-check-outlined-37">
+                                                            <h3>asd <span>|</span> ads</h3>
+                                                            <p>Jl. Swadaya No.16, RT.002/RW.005, Tajur (No.143B Pintu No.15)CILEDUG, KOTA TANGERANG, BANTEN, Indonesia, 15152</p>
+                                                        </label>
+                                                    </div>
+                                                
+                                                    <div>
+                                                        <input type="radio" class="btn-check" id="btn-check-outlined-38" name="address" autocomplete="off" value="38">
+                                                        <label class="create-order-address-card" for="btn-check-outlined-38">
+                                                            <h3>asd <span>|</span> asd</h3>
+                                                            <p>Jl. Swadaya No.16, RT.002/RW.005, Tajur (No.143B Pintu No.15)CILEDUG, KOTA TANGERANG, BANTEN, Indonesia, 15152</p>
+                                                        </label>
+                                                    </div>
+                                                
+                                            </div>
+                                        </div>
+                                    
+                                
+                            </div>
+                            <div class="create-order-form-footer">
+                                <nav aria-label="Page navigation example">
+                                    <ul class="nav pagination" id="myTab" role="tablist">
+                                        <li class="page-item">
+                                            <a class="page-link" id="prev-tab-address">Previous</a>
+                                        </li>
+                                        
+                                            <li class="page-item address">
+                                                <a class="page-link active" id="1-tab-address" data-bs-toggle="tab" href="#1-address" role="tab" aria-controls="1" aria-selected="true">
+                                                    1
+                                                </a>
+                                            </li>
+                                        
+                                            <li class="page-item address">
+                                                <a class="page-link " id="2-tab-address" data-bs-toggle="tab" href="#2-address" role="tab" aria-controls="2" aria-selected="false" tabindex="-1">
+                                                    2
+                                                </a>
+                                            </li>
+                                        
+                                        <li class="page-item">
+                                            <a class="page-link" id="next-tab-address">Next</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <div>
+                                    <button type="button" id="back-to-select-spear" class="create-order-navigation-button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+                                            <path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160zm352-160l-160 160c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L301.3 256 438.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0z"></path>
+                                        </svg>
+                                        <p>Back to select spear</p>
+                                    </button>
+                                    <button type="submit" id="finish-order" class="create-order-navigation-button" disabled="">
+                                        <p>Finish order</p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+                                            <path d="M342.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 178.7l-57.4-57.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l80 80c12.5 12.5 32.8 12.5 45.3 0l160-160zm96 128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 402.7 54.6 297.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l256-256z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>        
+    
+            <!-- Spear Modal -->
+            <div class="modal fade" id="createSpearModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-body custom-modal-content">
+                            <div>
+                                <h2 style="text-align: center; border:none">Let's Craft Your Dream Spear!</h2>
+                                <p style="text-align: center" class="custom-modal-description">Please fill up information field below</p>
+                            </div>
+                            <div class="mb-3">
+                                <label for="Name" class="form-label"><p class="custom-modal-description">Name</p></label>
+                                <input type="text" class="form-control custom-input" id="custom-name" name="custom-name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="Carved_Name" class="form-label"><p class="custom-modal-description">Carved Name</p></label>
+                                <input type="text" class="form-control custom-input" id="custom-carved_name" name="custom-carved_name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="Spear_Color" class="form-label"><p class="custom-modal-description">Spear Color</p></label>
+                                <select class="form-select custom-input" id="custom-color" name="custom-color">
+                                    
+                                        <option value="1">
+                                            Wood Tones
+                                        </option>
+                                    
+                                        <option value="2">
+                                            Black
+                                        </option>
+                                    
+                                        <option value="3">
+                                            Camouflage
+                                        </option>
+                                    
+                                </select>
+                            </div>
+                            <div class="width-length-container">
+                                <div class="mb-3">
+                                    <label for="Width" class="form-label"><p class="custom-modal-description">Spear's Width</p></label>
+                                    <input type="number" class="form-control custom-input" id="custom-width" name="custom-width">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="Length" class="form-label"><p class="custom-modal-description">Spear's Length</p></label>
+                                    <input type="number" class="form-control custom-input" id="custom-length" name="custom-length">
+                                </div>
+                            </div>
+                            <div class="sign-button-group">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><p style="color: white" class="custom-modal-description">Cancel</p></button>
+                                <button type="button" class="btn btn-primary" id="create-spear-button" disabled="">
+                                    <p style="color: white" class="custom-modal-description">Create</p>
+                                </button>                       
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>        
-    </form>
-
-    <footer class="footer" style="background-color: #001c2b; color: white; padding: 3vw 5vw 3vw 5vw;">
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-            <div style="flex: 1;">
-                <h4>HEADQUARTERS</h4>
-                <p style="color: white;">Jalan XYZ, Lombok, Indonesia</p>
-            </div>
-            <div style="flex: 1; text-align: right;">
-                <a href="https://www.instagram.com" style="text-decoration: none; margin-right: 10px;">
-                    <i class="fa-brands fa-square-instagram social-icon" style="color: white; font-size: 24px;"></i>
-                </a>
-                <a href="https://www.twitter.com" style="text-decoration: none; margin-right: 10px;">
-                    <i class="fa-brands fa-square-x-twitter social-icon" style="color: white; font-size: 24px;"></i>
-                </a>
-                <a href="https://www.linkedin.com" style="text-decoration: none;">
-                    <i class="fa-brands fa-linkedin social-icon" style="color: white; font-size: 24px;"></i>
-                </a>
-            </div>            
+            
+    
+            <!-- Addres Modal -->
+            <div class="modal fade" id="create-address-modal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-body custom-modal-content">
+                            <div>
+                                <h2 style="text-align: center; border:none">Edit your address!</h2>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label"><p class="custom-modal-description">Address Title</p></label>
+                                <input type="text" class="form-control custom-input" id="custom-address" name="custom-address">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label"><p class="custom-modal-description">Recipient Name</p></label>
+                                <input type="text" class="form-control custom-input" id="custom-recipient_name" name="custom-recipient_name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label"><p class="custom-modal-description">Phone Number</p></label>
+                                <input type="text" class="form-control custom-input" id="custom-phone_number" name="custom-phone_number">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label"><p class="custom-modal-description">Country</p></label>
+                                <select class="form-select custom-input" id="custom-country" name="custom-country">
+                                    
+                                        <option value="1">
+                                            Indonesia
+                                        </option>
+                                    
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label"><p class="custom-modal-description">State</p></label>
+                                <select class="form-select custom-input" id="custom-state" name="custom-state">
+                                    
+                                        <option value="1">
+                                            Banten
+                                        </option>
+                                    
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label"><p class="custom-modal-description">City</p></label>
+                                <select class="form-select custom-input" id="custom-city" name="custom-city">
+                                    
+                                        <option value="1">
+                                            Jakarta
+                                        </option>
+                                    
+                                        <option value="2">
+                                            Bandung
+                                        </option>
+                                    
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label"><p class="custom-modal-description">Post Code</p></label>
+                                <input type="text" class="form-control custom-input" name="custom-post_code" id="custom-post_code">
+                            </div>
+                            <div class="mb-4">
+                                <label for="exampleFormControlInput1" class="form-label"><p class="custom-modal-description">Address Detail</p></label>
+                                <textarea class="form-control custom-input" name="custom-note" id="custom-note" rows="3"></textarea>
+                            </div>
+                            <div class="sign-button-group">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><p style="color: white" class="custom-modal-description">Cancel</p></button>
+                                <button type="button" class="btn btn-primary" id="create-address-button" disabled=""><p style="color: white" class="custom-modal-description">Update</p></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>        
+        </form>
+    
+            </main>
+            <footer class="footer" style="background-color: #001c2b; color: white; padding: 3vw 5vw 3vw 5vw;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div style="flex: 1;">
+                        <h4>HEADQUARTERS</h4>
+                        <p style="color: white;">Jalan XYZ, Lombok, Indonesia</p>
+                    </div>
+                    <div style="flex: 1; text-align: right;">
+                        <a href="https://www.instagram.com" style="text-decoration: none; margin-right: 10px;">
+                            <i class="fa-brands fa-square-instagram social-icon" style="color: white; font-size: 24px;"></i>
+                        </a>
+                        <a href="https://www.twitter.com" style="text-decoration: none; margin-right: 10px;">
+                            <i class="fa-brands fa-square-x-twitter social-icon" style="color: white; font-size: 24px;"></i>
+                        </a>
+                        <a href="https://www.linkedin.com" style="text-decoration: none;">
+                            <i class="fa-brands fa-linkedin social-icon" style="color: white; font-size: 24px;"></i>
+                        </a>
+                    </div>            
+                </div>
+                <hr>    
+                <div style="text-align: center;">
+                    <p style="color: white;">© Dum Spiro Spero. All rights reserved.</p>
+                </div>
+            </footer>        
         </div>
-        <hr>    
-        <div style="text-align: center;">
-            <p style="color: white;">© Dum Spiro Spero. All rights reserved.</p>
-        </div>
-    </footer>   
-
+        <script src="/static/js/popper.min.js"></script>
+        <script src="/static/js/jquery.min.js"></script>
+        <script src="/static/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="/static/js/script.js"></script>
+    
+    
+    <script>
+        // 
+        
+        // 
+    
+        // 
+    </script>
+    
+    
+    
+    <!-- Create a new address -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const createButton = document.querySelector('#create-address-button'); // Add an ID for your create button
@@ -411,6 +707,7 @@
         });
     </script>
     
+    <!-- Create a new spear -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const createButton = document.querySelector('#create-spear-button'); // Add an ID for your create button
@@ -440,9 +737,10 @@
         });
     </script>
     
+    <!-- Spear Multi-Page -->
     <script>
         $(document).ready(function() {
-            let totalSpearPages = "{{ total_craft_page|length }}";
+            let totalSpearPages = "2";
             let isAnimating = false; // Add this flag to track if an animation is in progress
             let currentSpearIndex;
     
@@ -518,7 +816,7 @@
                 <div id="custom-spear-card">
                     <input type="radio" class="btn-check" id="btn-check-outlined-custom-spear-${totalSpearPages}" name="craft" autocomplete="off" value="custom-spear">
                     <label class="create-order-spear-card" for="btn-check-outlined-custom-spear-${totalSpearPages}">
-                        <div><img src="media/assets/Speargun.png" alt=""></div>
+                        <div><img src="/media/assets/Speargun.png" alt=""></div>
                         <div>
                             <h3 id="spear-name-display">Spear Name</h3>
                             <div>
@@ -551,7 +849,7 @@
                             <div id="custom-spear-card">
                                 <input type="radio" class="btn-check" id="btn-check-outlined-custom-spear-${totalSpearPages}" name="craft" autocomplete="off" value="custom-spear">
                                 <label class="create-order-spear-card" for="btn-check-outlined-custom-spear-${totalSpearPages}">
-                                    <div><img src="media/assets/Speargun.png" alt=""></div>
+                                    <div><img src="/media/assets/Speargun.png" alt=""></div>
                                     <div>
                                         <h3 id="spear-name-display">Spear Name</h3>
                                         <div>
@@ -618,17 +916,16 @@
         });
     </script>
     
-    
+    <!-- Address Multi-Page -->
     <script>
         $(document).ready(function() {
-            let totalAddressPages = "{{ total_address_page|length }}";
+            let totalAddressPages = "2";
             let isAnimating = false; // Add this flag to track if an animation is in progress
             let currentAddressIndex;
     
             // Function to update the current index based on the active class
             function updateAddressCurrentIndex() {
                 currentAddressIndex = $('.page-item.address a.active').attr('id').split('-')[0];
-                console.log(currentAddressIndex);
                 currentAddressIndex = parseInt(currentAddressIndex, 10); // Convert string to number
             }
     
@@ -769,4 +1066,6 @@
             });
         });
     </script>
-</body>
+    
+    
+    </body>

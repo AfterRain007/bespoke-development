@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="static/style.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="static/script.js"></script>
+    <title>Speargun-FIX</title>
+</head>
+<body>
+    
+    <nav>
+        <div class="left-navbar-button-container">
+            <a class="logo-button" href="/">
+                <img src="media/assets/Logo.png" alt="speargun-logo">
+            </a>
+            <div class="navbar-button-container">
+                <a class="navbar-button" href="/index.html">
+                    <div>HOME</div>
+                    <div></div>
+                </a>
+                <a class="navbar-button" href="/gallery.html">
+                    <div>GALLERY</div>
+                    <div></div>
+                </a>
+                <a class="navbar-button" href="/craft.html">
+                    <div>CRAFT</div>
+                    <div></div>
+                </a>
+                <a class="navbar-button" href="/about-us.html">
+                    <div>ABOUT US</div>
+                    <div></div>
+                </a>
+                <a class="navbar-button" href="/order.html">
+                    <div>ORDER</div>
+                    <div></div>
+                </a>
+            </div>
+        </div>
+        <div class="right-navbar-button-container">
+            <a href="/cart.html" class="shipping-button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor"><path fill-rule="evenodd" d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20l44 0 0 44c0 11 9 20 20 20s20-9 20-20l0-44 44 0c11 0 20-9 20-20s-9-20-20-20l-44 0 0-44c0-11-9-20-20-20s-20 9-20 20l0 44-44 0c-11 0-20 9-20 20z"></path></svg>
+            </a>
+            
+            <div class="profile-dropdown-container">
+                <button class="dropdown-toggle profile-dropdown-button" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    admin
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/profile.html">MANAGE PROFILE</a></li>
+                    <li><a href="/logout.html"><button class="dropdown-item" type="submit">SIGN OUT</button></a></li>
+                </ul>
+            </div> 
+            
+            <button class="hamburger-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#off-canvas-navbar" aria-controls="offcanvasExample">
+                <svg xmlns="http://www.w3.org/2000/svg" height="23" fill="currentColor" viewBox="0 0 448 512"><path fill-rule="evenodd" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"></path></svg>
+            </button>
+        </div>
+    </nav>  
+    
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="off-canvas-navbar" aria-labelledby="offcanvasExampleLabel" style="width: 50vw">
+        <div class="off-canvas-close-button-container">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-navbar-button-container">
+            <div class="navbar-button-container-top">
+                <a class="navbar-button-offcanvas navbar-button-offcanvas-active" href="/">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor"><path fill-rule="evenodd" d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"></path></svg>
+                    <div>HOME</div>
+                </a>
+                <a class="navbar-button-offcanvas" href="/gallery">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor"><path fill-rule="evenodd" d="M160 32c-35.3 0-64 28.7-64 64l0 224c0 35.3 28.7 64 64 64l352 0c35.3 0 64-28.7 64-64l0-224c0-35.3-28.7-64-64-64L160 32zM396 138.7l96 144c4.9 7.4 5.4 16.8 1.2 24.6S480.9 320 472 320l-144 0-48 0-80 0c-9.2 0-17.6-5.3-21.6-13.6s-2.9-18.2 2.9-25.4l64-80c4.6-5.7 11.4-9 18.7-9s14.2 3.3 18.7 9l17.3 21.6 56-84C360.5 132 368 128 376 128s15.5 4 20 10.7zM192 128a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zM48 120c0-13.3-10.7-24-24-24S0 106.7 0 120L0 344c0 75.1 60.9 136 136 136l320 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-320 0c-48.6 0-88-39.4-88-88l0-224z"></path></svg>
+                    <div>GALLERY</div>
+                </a>
+                <a class="navbar-button-offcanvas" href="/build-spear">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path fill-rule="evenodd" d="M464 6.1c9.5-8.5 24-8.1 33 .9l8 8c9 9 9.4 23.5 .9 33l-85.8 95.9c-2.6 2.9-4.1 6.7-4.1 10.7l0 21.4c0 8.8-7.2 16-16 16l-15.8 0c-4.6 0-8.9 1.9-11.9 5.3L100.7 500.9C94.3 508 85.3 512 75.8 512c-8.8 0-17.3-3.5-23.5-9.8L9.7 459.7C3.5 453.4 0 445 0 436.2c0-9.5 4-18.5 11.1-24.8l111.6-99.8c3.4-3 5.3-7.4 5.3-11.9l0-27.6c0-8.8 7.2-16 16-16l34.6 0c3.9 0 7.7-1.5 10.7-4.1L464 6.1zM432 288c3.6 0 6.7 2.4 7.7 5.8l14.8 51.7 51.7 14.8c3.4 1 5.8 4.1 5.8 7.7s-2.4 6.7-5.8 7.7l-51.7 14.8-14.8 51.7c-1 3.4-4.1 5.8-7.7 5.8s-6.7-2.4-7.7-5.8l-14.8-51.7-51.7-14.8c-3.4-1-5.8-4.1-5.8-7.7s2.4-6.7 5.8-7.7l51.7-14.8 14.8-51.7c1-3.4 4.1-5.8 7.7-5.8zM87.7 69.8l14.8 51.7 51.7 14.8c3.4 1 5.8 4.1 5.8 7.7s-2.4 6.7-5.8 7.7l-51.7 14.8L87.7 218.2c-1 3.4-4.1 5.8-7.7 5.8s-6.7-2.4-7.7-5.8L57.5 166.5 5.8 151.7c-3.4-1-5.8-4.1-5.8-7.7s2.4-6.7 5.8-7.7l51.7-14.8L72.3 69.8c1-3.4 4.1-5.8 7.7-5.8s6.7 2.4 7.7 5.8zM208 0c3.7 0 6.9 2.5 7.8 6.1l6.8 27.3 27.3 6.8c3.6 .9 6.1 4.1 6.1 7.8s-2.5 6.9-6.1 7.8l-27.3 6.8-6.8 27.3c-.9 3.6-4.1 6.1-7.8 6.1s-6.9-2.5-7.8-6.1l-6.8-27.3-27.3-6.8c-3.6-.9-6.1-4.1-6.1-7.8s2.5-6.9 6.1-7.8l27.3-6.8 6.8-27.3c.9-3.6 4.1-6.1 7.8-6.1z"></path></svg>
+                    <div>CRAFT</div>
+                </a>
+                <a class="navbar-button-offcanvas" href="/">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor"><path fill-rule="evenodd" d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l448 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zm80 256l64 0c44.2 0 80 35.8 80 80c0 8.8-7.2 16-16 16L80 384c-8.8 0-16-7.2-16-16c0-44.2 35.8-80 80-80zm-32-96a64 64 0 1 1 128 0 64 64 0 1 1 -128 0zm256-32l128 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-128 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64l128 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-128 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64l128 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-128 0c-8.8 0-16-7.2-16-16s7.2-16 16-16z"></path></svg>
+                    <div>ABOUT US</div>
+                </a>
+            </div>
+            <div class="navbar-button-container-bottom">
+                <a href="" class="navbar-button-offcanvas">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor"><path fill-rule="evenodd" d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20l44 0 0 44c0 11 9 20 20 20s20-9 20-20l0-44 44 0c11 0 20-9 20-20s-9-20-20-20l-44 0 0-44c0-11-9-20-20-20s-20 9-20 20l0 44-44 0c-11 0-20 9-20 20z"></path></svg>
+                    <div>SHIPPING STATUS</div>
+                </a>
+                
+                <div class="navbar-button-offcanvas dropstart">
+                    <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        admin
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/manage-profile">MANAGE PROFILE</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><form action="/en/logout/"><button class="dropdown-item" type="submit">SIGN OUT</button></form></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <!-- SIGN IN -->
+    <div class="modal fade" id="SignInModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body custom-modal-content">
+                    <div>
+                        <h2 style="text-align: center; border:none">Sign in to your account</h2>
+                        <p style="text-align: center" class="custom-modal-description">You must be signed in to perform this action</p>
+                    </div>
+                    <form action="/en/login/" method="POST">
+                        <input type="hidden" name="csrfmiddlewaretoken" value="rz2EMy4J5fAi3PmXFPvJYm7aZ7jGBoe0cbhpz3uMM6VhfCV24lUWimJ66nCFyqBv">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label"><p class="custom-modal-description">Email Address</p></label>
+                            <input type="text" name="login_username" class="form-control custom-input" id="exampleFormControlInput1" placeholder="name@example.com">
+                        </div>
+                        <div class="mb-4">
+                            <label for="exampleInputPassword1" class="form-label"><p class="custom-modal-description">Password</p></label>
+                            <input type="password" name="login_password" class="form-control custom-input" id="exampleInputPassword1">
+                        </div>
+                        <div class="sign-button-group">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><p style="color: white" class="custom-modal-description">Close</p></button>
+                            <button type="submit" class="btn btn-primary"><p style="color: white" class="custom-modal-description">Sign In</p></button>
+                        </div>
+                    </form>
+                    <div>
+                        <p style="text-align: center" class="custom-modal-description">Don't have an account?<button class="switch-modal-button" data-bs-target="#SignUpModal" data-bs-toggle="modal">Sign Up</button></p>
+                        <a href="/en/accounts/google/login/?next=/">Login with Google</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- SIGN UP -->
+    <div class="modal fade" id="SignUpModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body custom-modal-content">
+                <div>
+                    <h2 style="text-align: center; border:none">Let's register your account!</h2>
+                    <p style="text-align: center" class="custom-modal-description">you must be signed in to perform this action</p>
+                </div>
+                <form action="/en/sign-up/" method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="rz2EMy4J5fAi3PmXFPvJYm7aZ7jGBoe0cbhpz3uMM6VhfCV24lUWimJ66nCFyqBv">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label"><p class="custom-modal-description">Username</p></label>
+                        <input type="text" class="form-control custom-input" id="username" name="username">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label"><p class="custom-modal-description">Email Address</p></label>
+                        <input type="email" class="form-control custom-input" id="exampleFormControlInput1" placeholder="example@mail.com" name="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label"><p class="custom-modal-description">Password</p></label>
+                        <input type="password" class="form-control custom-input" id="password1" name="password1">
+                    </div>
+                    <div class="mb-4">
+                        <label for="exampleInputPassword1" class="form-label"><p class="custom-modal-description">Confirm Password</p></label>
+                        <input type="password" class="form-control custom-input" id="password2" name="password2">
+                    </div>
+                    <div class="sign-button-group">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><p style="color: white" class="custom-modal-description">Cancel</p></button>
+                        <button type="submit" class="btn btn-primary"><p style="color: white" class="custom-modal-description">Create</p></button>
+                    </div>
+                </form>
+                <div>
+                    <p style="text-align: center" class="custom-modal-description">Already have an account?<button class="switch-modal-button" data-bs-target="#SignInModal" data-bs-toggle="modal">Sign In</button></p>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+        <div class="main-footer-container">
+            <main>
+                
+        <div class="order-list-page-container">
+            <div class="order-list-page-title-container">
+                <h2>ORDER LIST</h2>
+                <a class="create-new-button" href="/order.html">New Order</a>
+            </div>
+            <div class="order-list-content-container">
+                
+                <div class="nav nav-tabs">
+                    <div class="nav-item">
+                        
+                        <a href="/cart.html" class="nav-link" id="all-tab">All</a>
+                        
+                    </div>
+                    <div class="nav-item">
+                        
+                        <a href="awaiting.html" class="nav-link active" id="waiting-payment-tab">Awaiting Payment</a>
+                        
+                    </div>
+                    <div class="nav-item">
+                        
+                        <a href="pending-confirmation.html" class="nav-link" id="waiting-payment-tab">Pending Confirmation</a>
+                        
+                    </div>
+                    <div class="nav-item">
+                        
+                        <a href="confirmed.html" class="nav-link" id="process-tab">Confirmed</a>
+                        
+                    </div>
+                    <div class="nav-item">
+                        
+                        <a href="complete.html" class="nav-link" id="complete-tab">Completed</a>
+                        
+                    </div>
+                    <div class="nav-item">
+                        
+                        <a href="cancelled.html" class="nav-link" id="cancel-tab">Cancelled</a>
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="all-tab-pane" role="tabpanel" aria-labelledby="all-tab" tabindex="0">
+                        
+                        <div class="order-card-container mb-4">
+                            <div class="order-card-image-container">
+                                <p class="order-number">Order ID 1073</p>
+                                <img src="/media/assets/Speargun(vertical).png" alt="Vertical Spear" class="vertical-spear">
+                                <img src="/media/assets/Speargun.png" alt="Horizontal Spear" class="horizontal-spear">
+                            </div>
+                        
+                            
+                            <div class="order-card">
+                                <h2>Spear 2</h2>
+                                <div class="order-card-detail">
+                                    <div class="order-card-detail-spear">
+                                        <div class="spear-detail">
+                                            <p class="font-bold">Detail Spear</p>
+                                            <p>Carved Name: 8987, Dimensions: 123x110 cm, Color: Camouflage</p>
+                                        </div>
+                                        <div class="recipient-detail">
+                                            <p class="font-bold">asd | ads</p>
+                                            <p>wasd</p>
+                                        </div>
+                                    </div>
+                                    <div class="order-card-detail-spear">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td><p>Order Date</p></td>
+                                                    <td><p>:</p></td>
+                                                    <td><p>April 14, 2025, 9:04 p.m.</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p>Total Price</p></td>
+                                                    <td><p>:</p></td>
+                                                    <td><p>$500.00</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p>Payment Method</p></td>
+                                                    <td><p>:</p></td>
+                                                    <td><p>None</p></td>
+                                                </tr>
+                                                
+                                            </tbody>
+                                        </table>
+                                        <div class="order-button-group">
+                                            
+                                                <a href="/en/cart/confirm-payment/73/" class="confirm-order-button">Confirm Payment</a>
+                                                <form action="/en/cancel/73" method="post">
+                                                    <input type="hidden" name="csrfmiddlewaretoken" value="DEcaVsSP2IddOurZxfkzkV3DX7EhsB4hogrVIXiSJzyc0h04WLJMEVFz4nXgpDrM">
+                                                    <button type="submit" class="cancel-order-button">Cancel Order</button>
+                                                </form>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <p class="custom-countdown" id="countdown-73">0h 52m 43s</p>
+                                <script>
+                                    function startCountdown(createdAt, pk) {
+                                        const createdDate = new Date(createdAt).getTime();
+                                        const deadline = createdDate + 60 * 60 * 1000;
+                                        const countdownElement = document.getElementById("countdown-" + pk);
+                        
+                                        const x = setInterval(function() {
+                                            const now = new Date().getTime();
+                                            const distance = deadline - now;
+                        
+                                            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                                            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                        
+                                            countdownElement.innerHTML = `${hours}h ${minutes}m ${seconds}s`;
+                        
+                                            if (distance < 0) {
+                                                clearInterval(x);
+                                                countdownElement.innerHTML = "EXPIRED";
+                                            }
+                                        }, 1000);
+                                    }
+                        
+                                    startCountdown('2025-04-14 21:04:01', "73");
+                                </script>
+                                
+                                <p class="custom-badge waiting" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Payment is pending for this order.">Awaiting Payment
+                                    
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="currentColor"><path d="M182.6 137.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8l256 0c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-128-128z"></path></svg>
+                                    
+                                </p>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+            </main>
+            <footer class="footer" style="background-color: #001c2b; color: white; padding: 3vw 5vw 3vw 5vw;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div style="flex: 1;">
+                        <h4>HEADQUARTERS</h4>
+                        <p style="color: white;">Jalan XYZ, Lombok, Indonesia</p>
+                    </div>
+                    <div style="flex: 1; text-align: right;">
+                        <a href="https://www.instagram.com" style="text-decoration: none; margin-right: 10px;">
+                            <i class="fa-brands fa-square-instagram social-icon" style="color: white; font-size: 24px;"></i>
+                        </a>
+                        <a href="https://www.twitter.com" style="text-decoration: none; margin-right: 10px;">
+                            <i class="fa-brands fa-square-x-twitter social-icon" style="color: white; font-size: 24px;"></i>
+                        </a>
+                        <a href="https://www.linkedin.com" style="text-decoration: none;">
+                            <i class="fa-brands fa-linkedin social-icon" style="color: white; font-size: 24px;"></i>
+                        </a>
+                    </div>            
+                </div>
+                <hr>    
+                <div style="text-align: center;">
+                    <p style="color: white;">© Dum Spiro Spero. All rights reserved.</p>
+                </div>
+            </footer>        
+        </div>
+        <script src="/static/js/popper.min.js"></script>
+        <script src="/static/js/jquery.min.js"></script>
+        <script src="/static/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="/static/js/script.js"></script>
+    
+    
+    <script>
+        // 
+        
+        // 
+    
+        // 
+    </script>
+    
+    
+    
+</body>
+</html>
