@@ -72,11 +72,8 @@
             <!-- <p>Our products are crafted to meet the needs of spearfishers of all skill levels. From beginners to professionals, we ensure that every speargun is built with high-quality, ready-to-use wood, making them highly eco-friendly.</p> -->
             <div class="fix-section-craft-dashboard-item">
                 <div class="tab-content section-craft-dashboard-body" style="padding: 0px; border: none;">
-                    {% if Craft %}
-                        {% for page in Craft %}
                             <div id="{{ forloop.counter }}" class="tab-pane fade{% if forloop.counter == 1 %} show active{% endif %}" role="tabpanel" aria-labelledby="{{ forloop.counter }}-tab">
                                 <div class="custom-craft-card-container">
-                                    {% for spear in page %}
                                     <div class="custom-craft-card">
                                         <div class="custom-craft-card-header">
                                             <h3>{{ spear.name }}</h3>
