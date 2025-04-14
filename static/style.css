@@ -464,7 +464,7 @@ nav {
     height: 60vh;
 }
 .build-gallery-card {
-    background-image: url('/media/assets/diving-1.jpg');
+    background-image: url('media/assets/diving-1.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -597,7 +597,7 @@ nav {
     left: 0;
     width: 150%;
     height: 100%;
-    background-image: url('/media/assets/diving-1.jpg');
+    background-image: url('media/assets/diving-1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -676,10 +676,10 @@ nav {
 }
 .commitment-card p {font-size: 0.9vw; color: white; text-align: justify;}
 .commitment-card:last-child {min-width: 47.5vw;margin-right: 0;}
-.commitment-card:nth-child(1) {background-image: url('/media/assets/diving-2.jpg');}
-.commitment-card:nth-child(2) {background-image: url('/media/assets/diving-3.jpg');}
-.commitment-card:nth-child(3) {background-image: url('/media/assets/diving-2.jpg');}
-.commitment-card:nth-child(4) {background-image: url('/media/assets/diving-3.jpg');}
+.commitment-card:nth-child(1) {background-image: url('media/assets/diving-2.jpg');}
+.commitment-card:nth-child(2) {background-image: url('media/assets/diving-3.jpg');}
+.commitment-card:nth-child(3) {background-image: url('media/assets/diving-2.jpg');}
+.commitment-card:nth-child(4) {background-image: url('media/assets/diving-3.jpg');}
 .commitment-carousel-buttons {
     position: absolute;
     bottom: 1vw;
@@ -710,7 +710,7 @@ nav {
         left: 0;
         width: 150%;
         height: 100%;
-        background-image: url('/media/assets/diving-1.jpg');
+        background-image: url('media/assets/diving-1.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -750,10 +750,10 @@ nav {
 
     .commitment-card p {font-size: 2.7vw; color: white; text-align: justify;}
     .commitment-card:last-child {min-width: 90vw;margin-right: 0;}
-    .commitment-card:nth-child(1) {background-image: url('/media/assets/diving-2.jpg');}
-    .commitment-card:nth-child(2) {background-image: url('/media/assets/diving-3.jpg');}
-    .commitment-card:nth-child(3) {background-image: url('/media/assets/diving-2.jpg');}
-    .commitment-card:nth-child(4) {background-image: url('/media/assets/diving-3.jpg');}
+    .commitment-card:nth-child(1) {background-image: url('media/assets/diving-2.jpg');}
+    .commitment-card:nth-child(2) {background-image: url('media/assets/diving-3.jpg');}
+    .commitment-card:nth-child(3) {background-image: url('media/assets/diving-2.jpg');}
+    .commitment-card:nth-child(4) {background-image: url('media/assets/diving-3.jpg');}
     .commitment-carousel-buttons {
         position: absolute;
         bottom: 3vw;
@@ -992,7 +992,7 @@ nav {
 .contact-us-input:nth-child(2) {grid-area: formemail;}
 .contact-us-input:nth-child(3) {grid-area: formquestion;}
 .contact-information-container {
-    background-image: url('/media/assets/diving-1.jpg');
+    background-image: url('media/assets/diving-1.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -1087,22 +1087,22 @@ nav {
         "pict10 pict12 pict12 pict12 pict14 pict16"
         ;
 }
-.pict1 {grid-area: pict1;background-image: url('/media/assets/spear1.jpg');background-size: cover;background-position: center;}
-.pict2 {grid-area: pict2;background-image: url('/media/assets/spear2.jpg');background-size: cover;background-position: center;}
-.pict3 {grid-area: pict3;background-image: url('/media/assets/spear3.jpg');background-size: cover;background-position: center;}
-.pict4 {grid-area: pict4;background-image: url('/media/assets/spear4.jpg');background-size: cover;background-position: center;}
-.pict5 {grid-area: pict5;background-image: url('/media/assets/spear5.jpg');background-size: cover;background-position: center;}
-.pict6 {grid-area: pict6;background-image: url('/media/assets/spear6.jpg');background-size: cover;background-position: center;}
-.pict7 {grid-area: pict7;background-image: url('/media/assets/spear4.jpg');background-size: cover;background-position: center;}
-.pict8 {grid-area: pict8;background-image: url('/media/assets/spear2.jpg');background-size: cover;background-position: center;}
-.pict9 {grid-area: pict9;background-image: url('/media/assets/spear8.jpg');background-size: cover;background-position: center;}
-.pict10 {grid-area: pict10;background-image: url('/media/assets/spear9.jpg');background-size: cover;background-position: center;}
-.pict11 {grid-area: pict11;background-image: url('/media/assets/spear12.jpg');background-size: cover;background-position: center;}
-.pict12 {grid-area: pict12;background-image: url('/media/assets/spear13.jpg');background-size: cover;background-position: center;}
-.pict13 {grid-area: pict13;background-image: url('/media/assets/spear1.jpg');background-size: cover;background-position: center;}
-.pict14 {grid-area: pict14;background-image: url('/media/assets/spear3.jpg');background-size: cover;background-position: center;}
-.pict15 {grid-area: pict15;background-image: url('/media/assets/spear5.jpg');background-size: cover;background-position: center;}
-.pict16 {grid-area: pict16;background-image: url('/media/assets/spear7.jpg');background-size: cover;background-position: center;}
+.pict1 {grid-area: pict1;background-image: url('media/assets/spear1.jpg');background-size: cover;background-position: center;}
+.pict2 {grid-area: pict2;background-image: url('media/assets/spear2.jpg');background-size: cover;background-position: center;}
+.pict3 {grid-area: pict3;background-image: url('media/assets/spear3.jpg');background-size: cover;background-position: center;}
+.pict4 {grid-area: pict4;background-image: url('media/assets/spear4.jpg');background-size: cover;background-position: center;}
+.pict5 {grid-area: pict5;background-image: url('media/assets/spear5.jpg');background-size: cover;background-position: center;}
+.pict6 {grid-area: pict6;background-image: url('media/assets/spear6.jpg');background-size: cover;background-position: center;}
+.pict7 {grid-area: pict7;background-image: url('media/assets/spear4.jpg');background-size: cover;background-position: center;}
+.pict8 {grid-area: pict8;background-image: url('media/assets/spear2.jpg');background-size: cover;background-position: center;}
+.pict9 {grid-area: pict9;background-image: url('media/assets/spear8.jpg');background-size: cover;background-position: center;}
+.pict10 {grid-area: pict10;background-image: url('media/assets/spear9.jpg');background-size: cover;background-position: center;}
+.pict11 {grid-area: pict11;background-image: url('media/assets/spear12.jpg');background-size: cover;background-position: center;}
+.pict12 {grid-area: pict12;background-image: url('media/assets/spear13.jpg');background-size: cover;background-position: center;}
+.pict13 {grid-area: pict13;background-image: url('media/assets/spear1.jpg');background-size: cover;background-position: center;}
+.pict14 {grid-area: pict14;background-image: url('media/assets/spear3.jpg');background-size: cover;background-position: center;}
+.pict15 {grid-area: pict15;background-image: url('media/assets/spear5.jpg');background-size: cover;background-position: center;}
+.pict16 {grid-area: pict16;background-image: url('media/assets/spear7.jpg');background-size: cover;background-position: center;}
 @media (max-width: 768px) {
     .gallery-page-container {
         padding: 15vw 5vw;
@@ -1249,7 +1249,7 @@ nav {
     position: relative;
     height: 15vw;
     background-color: rgb(242, 247, 252);
-    background-image: url('/media/assets/Speargun.png');
+    background-image: url('media/assets/Speargun.png');
     background-size: cover;
     background-position: center;
     border-bottom: 1px solid #cccccc;
@@ -1962,7 +1962,7 @@ nav {
     box-sizing: border-box;
 }
 .contact-information-container {
-    background-image: url('/media/assets/diving-1.jpg');
+    background-image: url('media/assets/diving-1.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -2049,7 +2049,7 @@ nav {
 
 /* ==================== ABOUT US PAGE ==================== */
 .about-us-greetings-container {
-    background-image: url('/media/assets/diving-1.jpg');
+    background-image: url('media/assets/diving-1.jpg');
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -2144,7 +2144,7 @@ nav {
     gap: 1vw;
 }
 .ceo-profile-container > div:nth-child(1) > div:nth-child(1) {
-    background-image: url('/media/assets/diving-1.jpg');
+    background-image: url('media/assets/diving-1.jpg');
     background-size: cover;
     background-position: center;
     width: 100%;
