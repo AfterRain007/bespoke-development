@@ -597,7 +597,7 @@ nav {
     left: 0;
     width: 150%;
     height: 100%;
-    background-image: url('/media/assets/diving-1.jpg');
+    background-image: url('media/assets/diving-1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
