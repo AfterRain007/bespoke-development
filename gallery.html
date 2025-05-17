@@ -64,32 +64,315 @@
             </button>
         </div>
     </nav>
-    <div class="gallery-page-container">
-        <div class="gallery-page-caption-container">
-            <h1 class="gallery-page-title">OUR SPEARGUN GALLERY</h1>
-            <p class="gallery-page-description" style="text-align: justify;">Explore our collection of expertly crafted spearguns, designed for precision, power, and durability. Each piece in our gallery showcases the perfect blend of traditional craftsmanship and modern innovation, made from premium Indonesian wood and built to enhance your spearfishing experience.</p>
-            <p class="gallery-page-description" style="text-align: justify;">Ready to find your perfect speargun? Click the button below to dive in!</p>
-            <a href="" class="sexy-button"><div>Let's Craft</div></a>
-        </div>
-        <div class="gallery-grid-container">
-            <div class="pict1 box"></div>
-            <div class="pict2 box"></div>
-            <div class="pict3 box"></div>
-            <div class="pict4 box"></div>
-            <div class="pict5 box"></div>
-            <div class="pict6 box"></div>
-            <div class="pict7 box"></div>
-            <div class="pict8 box"></div>
-            <div class="pict9 box"></div>
-            <div class="pict10 box"></div>
-            <div class="pict11 box"></div>
-            <div class="pict12 box"></div>
-            <div class="pict13 box"></div>
-            <div class="pict14 box"></div>
-            <div class="pict15 box"></div>
-            <div class="pict16 box"></div>
+    <div class="gallery-page-greetings-container">
+    <div class="gallery-page-greetings-content-container">
+        <h2 style="border: none;padding: 0">Welcome to the Dum Spiro Spero Speargun Collections</h2>
+        <div>
+            <p>Explore our curated lineup of spearguns, each forged with precision, soul, and the spirit of the hunt. Whether you're navigating coral reefs or open ocean depths, our gear is built to elevate your dive with confidence and control.</p>
+            <p>Every model in our collection reflects our commitment to quality, performance, and respect for the ocean. Choose your weapon, embrace the silence beneath the waves, and experience the pursuit like never before.</p>
         </div>
     </div>
+</div>
+<div class="gallery-page-image-grid-container">
+    <div class="gallery-page-image-grid">
+        <div class="gallery-page-image"></div>
+        <div class="gallery-page-image"></div>
+        <div class="gallery-page-image"></div>
+        <div class="gallery-page-image"></div>
+        <div class="gallery-page-image"></div>
+        <div class="gallery-page-image"></div>
+        <div class="gallery-page-image"></div>
+        <div class="gallery-page-image"></div>
+        <div class="gallery-page-image"></div>
+    </div>
+    <div></div>
+</div>
+<div class="gallery-page-speargun-card-container">
+    <div class="gallery-page-speargun-card">
+        <img src="media/assets/Speargun(vertical).png" alt="" class="speargun-card-image">
+        <div class="speargun-card" onclick="showDetails('poseidon')">
+            <h3>Poseidon Hunter Pro</h3>
+            <p>Power. Precision. Proven performance for elite underwater hunters.</p>
+            <button>View Details</button>
+        </div>
+    </div>
+    <div class="gallery-page-speargun-card">
+        <img src="media/assets/Speargun(vertical).png" alt="" class="speargun-card-image">
+        <div class="speargun-card" onclick="showDetails('aqua')">
+            <h3>Aqua Strike Evo</h3>
+            <p>Agility meets accuracy — designed for speed and control in open waters.</p>
+            <button>View Details</button>
+        </div>
+    </div>
+    <div class="gallery-page-speargun-card">
+        <img src="media/assets/Speargun(vertical).png" alt="" class="speargun-card-image">
+        <div class="speargun-card" onclick="showDetails('triton')">
+            <h3>Triton Stealth Elite</h3>
+            <p>Silent, sleek, and deadly — your ultimate tactical spearfishing gear.</p>
+            <button>View Details</button>
+        </div>
+    </div>
+</div>
+<div id="poseidon" class="speargun-detail-modal">
+    <button class="close-btn" onclick="closeDetails('poseidon')">Close</button>
+    <h2 class="gallery-fade-top">DumSpiroSpero - Poseidon Hunter Pro</h2>
+    <div class="speargun-detail-container">
+        <div class="speargun-gallery-container gallery-fade-left" id="gallery-poseidon">
+            <div class="speargun-gallery-main-image">
+                <img id="mainDisplay-poseidon" src="media/assets/diving-1.jpg" alt="Main Image">
+            </div>
+            <div class="speargun-gallery-thumbnails">
+                <div class="speargun-gallery-thumbnail active" onclick="changeImage(this, 'mainDisplay-poseidon', 'media/assets/diving-1.jpg')">
+                    <img src="media/assets/diving-1.jpg" alt="">
+                </div>
+                <div class="speargun-gallery-thumbnail" onclick="changeImage(this, 'mainDisplay-poseidon', 'media/assets/diving-2.jpg')">
+                    <img src="media/assets/diving-2.jpg" alt="">
+                </div>
+                <div class="speargun-gallery-thumbnail" onclick="changeImage(this, 'mainDisplay-poseidon', 'media/assets/diving-3.jpg')">
+                    <img src="media/assets/diving-3.jpg" alt="">
+                </div>
+                <div class="speargun-gallery-thumbnail" onclick="changeImage(this, 'mainDisplay-poseidon', 'media/assets/spear10.jpg')">
+                    <img src="media/assets/spear10.jpg" alt="">
+                </div>
+                <div class="speargun-gallery-thumbnail" onclick="changeImage(this, 'mainDisplay-poseidon', 'media/assets/spear11.jpg')">
+                    <img src="media/assets/spear11.jpg" alt="">
+                </div>
+                <div class="speargun-gallery-thumbnail" onclick="changeImage(this, 'mainDisplay-poseidon', 'media/assets/spear12.jpg')">
+                    <img src="media/assets/spear12.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="speargun-gallery-detail">
+            <h3 class="gallery-fade-right"><strong>About This Speargun:</strong></h3>
+            <p class="gallery-fade-right">Built for seasoned spearfishers, the <strong>Poseidon Hunter Pro</strong> delivers unrelenting force and tactical precision beneath the waves. Designed for strong currents and deep dives, this speargun is a masterclass in engineering and power, perfect for those who seek total control in the ocean's toughest environments.</p>
+            <h3 class="gallery-fade-right"><strong>Materials:</strong></h3>
+            <ul class="gallery-fade-right">
+                <li>High-tensile marine-grade stainless steel trigger system</li>
+                <li>Dense Indonesian teakwood barrel for stability and strength</li>
+                <li>Reinforced rubber slings with Kevlar fiber core</li>
+                <li>Heat-treated aluminum rail guide for improved accuracy</li>
+                <li>Polyurethane-coated handle for enhanced grip and durability</li>
+            </ul>
+            <h3 class="gallery-fade-right"><strong>Key Features:</strong></h3>
+            <ul class="gallery-fade-right">
+                <li>Precision-balanced for seamless tracking in open water</li>
+                <li>Quick-release trigger mechanism for instant reaction time</li>
+                <li>Corrosion-resistant components ideal for saltwater use</li>
+                <li>Low-drag frame design for agile underwater handling</li>
+                <li>Optimized band placement for maximum power output</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="aqua" class="speargun-detail-modal">
+    <button class="close-btn" onclick="closeDetails('aqua')">Close</button>
+    <h1 class="gallery-fade-top">DumSpiroSpero - Aqua Strike Evo</h1>
+    <div class="speargun-detail-container"> 
+        <div class="speargun-gallery-container gallery-fade-left id="gallery-poseidon">
+            <div class="speargun-gallery-main-image">
+                <img id="mainDisplay-poseidon" src="media/assets/diving-1.jpg" alt="Main Image">
+            </div>
+            <div class="speargun-gallery-thumbnails">
+                <div class="speargun-gallery-thumbnail active" onclick="changeImage(this, 'mainDisplay-poseidon', 'media/assets/diving-1.jpg')">
+                    <img src="media/assets/diving-1.jpg" alt="">
+                </div>
+                <div class="speargun-gallery-thumbnail" onclick="changeImage(this, 'mainDisplay-poseidon', 'media/assets/diving-2.jpg')">
+                    <img src="media/assets/diving-2.jpg" alt="">
+                </div>
+                <div class="speargun-gallery-thumbnail" onclick="changeImage(this, 'mainDisplay-poseidon', 'media/assets/diving-3.jpg')">
+                    <img src="media/assets/diving-3.jpg" alt="">
+                </div>
+                <div class="speargun-gallery-thumbnail" onclick="changeImage(this, 'mainDisplay-poseidon', 'media/assets/spear10.jpg')">
+                    <img src="media/assets/spear10.jpg" alt="">
+                </div>
+                <div class="speargun-gallery-thumbnail" onclick="changeImage(this, 'mainDisplay-poseidon', 'media/assets/spear11.jpg')">
+                    <img src="media/assets/spear11.jpg" alt="">
+                </div>
+                <div class="speargun-gallery-thumbnail" onclick="changeImage(this, 'mainDisplay-poseidon', 'media/assets/spear12.jpg')">
+                    <img src="media/assets/spear12.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="speargun-gallery-detail">
+            <h3 class="gallery-fade-right"><strong>About This Speargun:</strong></h3>
+            <p class="gallery-fade-right">The <strong>Aqua Strike Evo</strong> is a silent predator’s weapon—built for flexibility, accuracy, and ease of use in reef-rich environments. With a streamlined, lightweight body and ergonomic design, it suits both beginners and experienced divers looking for swift, silent action.</p>
+            <h3 class="gallery-fade-right"><strong>Materials:</strong></h3>
+            <ul class="gallery-fade-right">
+                <li>Lightweight carbon fiber composite barrel</li>
+                <li>Precision injection-molded polymer muzzle</li>
+                <li>Stainless steel shafts with tri-cut tips</li>
+                <li>Silicone-coated ergonomic grip</li>
+                <li>Saltwater-resistant O-rings and connectors</li>
+            </ul>
+            <h3 class="gallery-fade-right"><strong>Key Features:</strong></h3>
+            <ul class="gallery-fade-right">
+                <li>Reduced recoil system for better shot control</li>
+                <li>Compact frame for tight coral and reef navigation</li>
+                <li>Easy-load rubber bands for smooth operation</li>
+                <li>Low noise output—ideal for stealthy approaches</li>
+                <li>Excellent buoyancy for effortless maneuverability</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="triton" class="speargun-detail-modal">
+    <button class="close-btn" onclick="closeDetails('triton')">Close</button>
+    <h1 class="gallery-fade-top">DumSpiroSpero - Triton Stealth Elite</h1>
+    <div class="speargun-detail-container">
+        <div class="speargun-gallery-container gallery-fade-left id="gallery-poseidon">
+            <div class="speargun-gallery-main-image">
+                <img id="mainDisplay-poseidon" src="media/assets/diving-1.jpg" alt="Main Image">
+            </div>
+            <div class="speargun-gallery-thumbnails">
+                <div class="speargun-gallery-thumbnail active" onclick="changeImage(this, 'mainDisplay-poseidon', 'media/assets/diving-1.jpg')">
+                    <img src="media/assets/diving-1.jpg" alt="">
+                </div>
+                <div class="speargun-gallery-thumbnail" onclick="changeImage(this, 'mainDisplay-poseidon', 'media/assets/diving-2.jpg')">
+                    <img src="media/assets/diving-2.jpg" alt="">
+                </div>
+                <div class="speargun-gallery-thumbnail" onclick="changeImage(this, 'mainDisplay-poseidon', 'media/assets/diving-3.jpg')">
+                    <img src="media/assets/diving-3.jpg" alt="">
+                </div>
+                <div class="speargun-gallery-thumbnail" onclick="changeImage(this, 'mainDisplay-poseidon', 'media/assets/spear10.jpg')">
+                    <img src="media/assets/spear10.jpg" alt="">
+                </div>
+                <div class="speargun-gallery-thumbnail" onclick="changeImage(this, 'mainDisplay-poseidon', 'media/assets/spear11.jpg')">
+                    <img src="media/assets/spear11.jpg" alt="">
+                </div>
+                <div class="speargun-gallery-thumbnail" onclick="changeImage(this, 'mainDisplay-poseidon', 'media/assets/spear12.jpg')">
+                    <img src="media/assets/spear12.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="speargun-gallery-detail">
+            <h3 class="gallery-fade-right"><strong>About This Speargun:</strong></h3>
+            <p class="gallery-fade-right">Engineered for pinpoint accuracy over long distances, the <strong>Triton Stealth Elite</strong> is the ultimate long-range spearfishing companion. Ideal for open-water shots and elusive game, it merges cutting-edge targeting with unmatched shooting stability.</p>
+            <h3 class="gallery-fade-right"><strong>Materials:</strong></h3>
+            <ul class="gallery-fade-right">
+                <li>Reinforced mahogany hybrid barrel with carbon sleeve</li>
+                <li>Hardened stainless steel shaft with flopper tip</li>
+                <li>Ball-bearing trigger system for zero-lag release</li>
+                <li>Aircraft-grade aluminum handle frame</li>
+                <li>Neoprene shoulder rest for comfort on extended dives</li>
+            </ul>
+            <h3 class="gallery-fade-right"><strong>Key Features:</strong></h3>
+            <ul class="gallery-fade-right">
+                <li>Long-range sight rail for enhanced targeting</li>
+                <li>Weighted barrel for minimal lateral drift underwater</li>
+                <li>Triple-band power system for deep penetration</li>
+                <li>Integrated line release for quick reloads</li>
+                <li>Built-in shock absorber system to protect shaft and frame</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Image Modal -->
+<div id="imageModal" class="image-modal">
+    <span class="image-modal-close">&times;</span>
+    <img class="image-modal-content" id="modalImage">
+</div>
+
+<script>
+    function showDetails(id) {
+        const modal = document.getElementById(id);
+        modal.classList.add('active');
+
+        const elements = modal.querySelectorAll('.gallery-fade-top, .gallery-fade-left, .gallery-fade-right');
+
+        elements.forEach((el, index) => {
+            setTimeout(() => {
+                el.classList.add('gallery-visible');
+            }, 200 * index); // urutan: top → left → right
+        });
+    }
+
+    function closeDetails(id) {
+        const modal = document.getElementById(id);
+        modal.classList.remove('active');
+
+        const elements = modal.querySelectorAll('.gallery-fade-top, .gallery-fade-left, .gallery-fade-right');
+        elements.forEach(el => el.classList.remove('gallery-visible'));
+    }
+
+    function changeImage(element, imageId, imageUrl) {
+
+        // Ganti gambar utama
+        document.getElementById(imageId).src = imageUrl;
+
+        // Hapus class 'active' dari semua thumbnail dalam gallery ini saja
+        const thumbnails = element.parentElement.querySelectorAll('.speargun-gallery-thumbnail');
+        thumbnails.forEach(t => t.classList.remove('active'));
+
+        // Tambahkan class 'active' ke thumbnail yang diklik
+        element.classList.add('active');
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll('.gallery-page-image');
+
+    const directionMap = {
+        0: 'fade-left',
+        1: 'fade-left',
+        2: 'fade-left',
+        3: 'fade-right',
+        4: 'fade-right',
+        5: 'fade-right',
+        6: 'fade-left',
+        7: 'fade-left',
+        8: 'fade-left',
+    };
+
+    images.forEach((img, i) => {
+        const dirClass = directionMap[i] || 'fade-left';
+        img.classList.add(dirClass);
+    });
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach((entry) => {
+            const img = entry.target;
+            const index = Array.from(images).indexOf(img);
+
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    img.classList.add('visible');
+                }, index * 150);
+            } else {
+                // Reset animasi saat keluar viewport
+                img.classList.remove('visible');
+            }
+        });
+    }, {
+        threshold: 0.25
+    });
+
+    images.forEach(img => observer.observe(img));
+});
+document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const closeBtn = document.querySelector(".image-modal-close");
+
+    document.querySelectorAll('.gallery-page-image').forEach(img => {
+        img.addEventListener('click', () => {
+            const bgImage = window.getComputedStyle(img).getPropertyValue('background-image');
+            const imageUrl = bgImage.slice(5, -2); // bersihkan url("...")
+            modalImg.src = imageUrl;
+            modal.style.display = "block";
+        });
+    });
+
+    closeBtn.onclick = function () {
+        modal.style.display = "none";
+        modalImg.src = '';
+    };
+
+    modal.onclick = function (e) {
+        if (e.target === modal) {
+            modal.style.display = "none";
+            modalImg.src = '';
+        }
+    };
+});
+</script>
     <footer class="footer" style="background-color: #001c2b; color: white; padding: 3vw 5vw 3vw 5vw;">
         <div style="display: flex; justify-content: space-between; align-items: center;">
             <div style="flex: 1;">
