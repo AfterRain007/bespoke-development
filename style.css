@@ -756,7 +756,6 @@ nav {
 }
 
 .build-gallery-card {
-    background-image: url('media/assets/diving-1.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -766,6 +765,12 @@ nav {
     gap: 1vw;
     position: relative;
     padding: 2.5vw;
+}
+.build-gallery-card:nth-child(1) {
+    background-image: url('media/assets/DSS - Speargun - Underwater 3.jpg');
+}
+.build-gallery-card:nth-child(2) {
+    background-image: url('media/assets/DSS - Speargun - Lets Built.png');
 }
 
 .build-gallery-card.shotgun {
@@ -940,7 +945,7 @@ nav {
     left: 0;
     width: 150%;
     height: 100%;
-    background-image: url('media/assets/diving-1.jpg');
+    background-image: url('media/assets/DSS - Speargun - Coral 1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1057,19 +1062,19 @@ nav {
 }
 
 .commitment-card:nth-child(1) {
-    background-image: url('media/assets/diving-2.jpg');
+    background-image: url('media/assets/DSS - Speargun - Underwater 4.png');
 }
 
 .commitment-card:nth-child(2) {
-    background-image: url('media/assets/diving-3.jpg');
+    background-image: url('media/assets/DSS - Speargun - Coral 2.png');
 }
 
 .commitment-card:nth-child(3) {
-    background-image: url('media/assets/diving-2.jpg');
+    background-image: url('media/assets/DSS - Speargun - Underwater 1.jpg');
 }
 
 .commitment-card:nth-child(4) {
-    background-image: url('media/assets/diving-3.jpg');
+    background-image: url('media/assets/DSS - Speargun - Underwater 2.jpg');
 }
 
 .commitment-card.shotgun:nth-child(1) {
@@ -1363,6 +1368,7 @@ nav {
 }
 
 .review-card-link {
+    height: 32.5vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1465,6 +1471,7 @@ nav {
     }
 
     .review-card-link {
+        height: 50vh;
         padding: 5vw;
     }
 
@@ -1549,7 +1556,7 @@ nav {
 }
 
 .contact-information-container {
-    background-image: url('media/assets/diving-1.jpg');
+    background-image: url('media/assets/DSS - Speaargun - Mark with Fish 1.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -2894,7 +2901,7 @@ nav {
 
 /* ==================== ABOUT US PAGE ==================== */
 .about-us-greetings-container {
-    background-image: url('media/assets/diving-1.jpg');
+    background-image: url('media/assets/DSS - Speargun - Underwater 1.jpg');
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -3012,7 +3019,7 @@ nav {
 }
 
 .ceo-profile-container {
-    background-color: beige;
+    background-color: aliceblue;
     padding: 5vw 25vw;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -4386,7 +4393,7 @@ input[type="radio"]:checked+.create-order-payment-card>div:nth-child(1) {
 
 /* ========== GALLERY PAGE ========== */
 .gallery-page-greetings-container {
-    background-image: url('media/assets/diving-1.jpg');
+    background-image: url('media/assets/DSS - Speargun - Underwater 4.png');
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -4459,15 +4466,15 @@ input[type="radio"]:checked+.create-order-payment-card>div:nth-child(1) {
     background-size: cover;
     background-position: center;
 }
-.gallery-page-image:nth-child(1) {grid-area: img1; background-image: url(media/assets/diving-1.jpg);}
-.gallery-page-image:nth-child(2) {grid-area: img2; background-image: url(media/assets/diving-2.jpg);}
-.gallery-page-image:nth-child(3) {grid-area: img3; background-image: url(media/assets/diving-3.jpg);}
-.gallery-page-image:nth-child(4) {grid-area: img4; background-image: url(media/assets/diving-2.jpg);}
-.gallery-page-image:nth-child(5) {grid-area: img5; background-image: url(media/assets/diving-3.jpg);}
-.gallery-page-image:nth-child(6) {grid-area: img6; background-image: url(media/assets/diving-1.jpg);}
-.gallery-page-image:nth-child(7) {grid-area: img7; background-image: url(media/assets/diving-1.jpg);}
-.gallery-page-image:nth-child(8) {grid-area: img8; background-image: url(media/assets/diving-2.jpg);}
-.gallery-page-image:nth-child(9) {grid-area: img9; background-image: url(media/assets/diving-3.jpg);}
+.gallery-page-image:nth-child(1) {grid-area: img1; background-image: url('media/assets/DSS - Speargun - Product 2.png');}
+.gallery-page-image:nth-child(2) {grid-area: img2; background-image: url('media/assets/DSS - Speargun - Product 3.png');}
+.gallery-page-image:nth-child(3) {grid-area: img3; background-image: url('media/assets/DSS - Speargun - Product 4.png');}
+.gallery-page-image:nth-child(4) {grid-area: img4; background-image: url('media/assets/DSS - Speargun - Product 12.png');}
+.gallery-page-image:nth-child(5) {grid-area: img5; background-image: url('media/assets/DSS - Speargun - Product 13.png');}
+.gallery-page-image:nth-child(6) {grid-area: img6; background-image: url('media/assets/DSS - Speargun - Product 7.png');}
+.gallery-page-image:nth-child(7) {grid-area: img7; background-image: url('media/assets/DSS - Speargun - Product 8.png');}
+.gallery-page-image:nth-child(8) {grid-area: img8; background-image: url('media/assets/DSS - Speargun - Product 9.png');}
+.gallery-page-image:nth-child(9) {grid-area: img9; background-image: url('media/assets/DSS - Speargun - Product 10.png');}
 
 .gallery-page-image.shotgun:nth-child(1) {grid-area: img1; background-image: url(media/assets/shotgun-1.jpg);}
 .gallery-page-image.shotgun:nth-child(2) {grid-area: img2; background-image: url(media/assets/shotgun-2.jpg);}
@@ -4859,4 +4866,9 @@ input[type="radio"]:checked+.create-order-payment-card>div:nth-child(1) {
 }
 .card-header.another-site-card, .card-footer.another-site-card {
     background-color: beige;
+}
+
+.container-chart .js-plotly-plot {
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.3); /* Adjust values as needed */
+    /* You can add other styles here */
 }

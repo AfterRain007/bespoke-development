@@ -34,14 +34,15 @@
                     <div>CRAFT</div>
                     <div></div>
                 </a>
+                <a class="navbar-button" href="collections.html">
+                    <div>COLLECTIONS</div>
+                    <div></div>
+                </a>
                 <a class="navbar-button" href="about-us.html">
                     <div>ABOUT US</div>
                     <div></div>
                 </a>
-                <a class="navbar-button" href="order.html">
-                    <div>ORDER</div>
-                    <div></div>
-                </a>
+
             </div>
         </div>
         <div class="right-navbar-button-container">
@@ -272,7 +273,30 @@
     <img class="image-modal-content" id="modalImage">
 </div>
 
-<script>
+    <footer class="footer" style="background-color: #001c2b; color: white; padding: 3vw 5vw 3vw 5vw;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="flex: 1;">
+                <h4>HEADQUARTERS</h4>
+                <p style="color: white;">Jalan XYZ, Lombok, Indonesia</p>
+            </div>
+            <div style="flex: 1; text-align: right;">
+                <a href="https://www.instagram.com" style="text-decoration: none; margin-right: 10px;">
+                    <i class="fa-brands fa-square-instagram social-icon" style="color: white; font-size: 24px;"></i>
+                </a>
+                <a href="https://www.twitter.com" style="text-decoration: none; margin-right: 10px;">
+                    <i class="fa-brands fa-square-x-twitter social-icon" style="color: white; font-size: 24px;"></i>
+                </a>
+                <a href="https://www.linkedin.com" style="text-decoration: none;">
+                    <i class="fa-brands fa-linkedin social-icon" style="color: white; font-size: 24px;"></i>
+                </a>
+            </div>            
+        </div>
+        <hr>    
+        <div style="text-align: center;">
+            <p style="color: white;">© Dum Spiro Spero. All rights reserved.</p>
+        </div>
+    </footer>   
+    <script>
     function showDetails(id) {
         const modal = document.getElementById(id);
         modal.classList.add('active');
@@ -334,11 +358,12 @@
             if (entry.isIntersecting) {
                 setTimeout(() => {
                     img.classList.add('visible');
-                }, index * 150);
-            } else {
-                // Reset animasi saat keluar viewport
-                img.classList.remove('visible');
-            }
+                }, index * 100);
+            } 
+            // else {
+            //     // Reset animasi saat keluar viewport
+            //     img.classList.remove('visible');
+            // }
         });
     }, {
         threshold: 0.25
@@ -373,27 +398,4 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 });
 </script>
-    <footer class="footer" style="background-color: #001c2b; color: white; padding: 3vw 5vw 3vw 5vw;">
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-            <div style="flex: 1;">
-                <h4>HEADQUARTERS</h4>
-                <p style="color: white;">Jalan XYZ, Lombok, Indonesia</p>
-            </div>
-            <div style="flex: 1; text-align: right;">
-                <a href="https://www.instagram.com" style="text-decoration: none; margin-right: 10px;">
-                    <i class="fa-brands fa-square-instagram social-icon" style="color: white; font-size: 24px;"></i>
-                </a>
-                <a href="https://www.twitter.com" style="text-decoration: none; margin-right: 10px;">
-                    <i class="fa-brands fa-square-x-twitter social-icon" style="color: white; font-size: 24px;"></i>
-                </a>
-                <a href="https://www.linkedin.com" style="text-decoration: none;">
-                    <i class="fa-brands fa-linkedin social-icon" style="color: white; font-size: 24px;"></i>
-                </a>
-            </div>            
-        </div>
-        <hr>    
-        <div style="text-align: center;">
-            <p style="color: white;">© Dum Spiro Spero. All rights reserved.</p>
-        </div>
-    </footer>   
 </body>

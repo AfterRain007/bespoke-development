@@ -44,6 +44,8 @@ new Swiper('.review-card-wrapper', {
 
 const createOrderSpearCard = document.querySelectorAll('.create-order-form-body.spear .create-order-spear-card')
 const createOrderAddressCard = document.querySelectorAll('.create-order-form-body.address .create-order-address-card')
+console.log("Address:", createOrderAddressCard)
+console.log("Spear:", createOrderSpearCard)
 
 const goToSelectAddress = document.getElementById('go-to-select-address')
 const backToSelectSpear = document.getElementById('back-to-select-spear')
@@ -88,6 +90,7 @@ function checkRadioSelection() {
     }
     goToSelectAddress.disabled = !isAnyRadioSelected;
 }
+
 function checkRadioSelection1() {
     let isAnyRadioSelected = false;
     for (let radio of createOrderAddressCard) {
@@ -105,8 +108,11 @@ finishOrderButton.disabled = true;
 
 // Tambahkan event listener ke setiap input radio
 for (let radio of createOrderSpearCard) {
+    console.log(radio)
     document.getElementById(radio.htmlFor).addEventListener('change', checkRadioSelection);
 }
-for (let radio of createOrderAddressCard) {
-    document.getElementById(radio.htmlFor).addEventListener('change', checkRadioSelection1);
+
+for (let address of createOrderAddressCard) {
+    console.log(address)
+    document.getElementById(address.htmlFor).addEventListener('change', checkRadioSelection1);
 }
